@@ -95,12 +95,14 @@ PROOF is designed to run in different environments:
 
 1. **Docker**: Use Docker to containerize your PROOF environment, making it easy to use on the system.
 
+<!--
 2. **Local Execution**: Run PROOF on your local machine without Docker or Kubernetes. 
 This is suitable for developers, who want to create and test own *Blocks*. Here, PROOF runs directly on the host operating system and each *Block* is performed in an own terminal.
 **This feature will be available in the next release (2026)**.
 
 3. (**Kubernetes**): Deploy PROOF on a Kubernetes cluster for scalable and distributed execution. This is ideal for production environments where you need to manage multiple workflows and blocks efficiently. 
 **This feature will be available in the next release (2026)**.
+-->
 
 # Prerequisites
 
@@ -112,11 +114,13 @@ All other required components are provided via Docker images.
 
 **Exception:** If you want to create your own *Blocks*, you need to have Python, Java, or MATLAB installed on your host system to create and test the model programs.
 
+<!--
 ### Local Execution
 will be documented in the next release (2026)
 
 ### Execution with Kubernetes
 will be documented in the next release (2026)
+-->
 
 <!--
 # PROOF Structure

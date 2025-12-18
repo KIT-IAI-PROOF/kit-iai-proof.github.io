@@ -24,7 +24,6 @@ theme:
 
 
 nav:
-  - Overview: overview/overview.md
   - Blocks:
     - Overview: Block/overview.md
     - Using Blocks: Block/using-proof-blocks.md
