@@ -36,7 +36,8 @@ nav:
     - Running Workflows: Workflow/running-workflows.md
     - Monitoring Workflows: Workflow/monitoring-workflows.md
   - Program: Program/proof-programs.md
-    #- Overview: Program/proof-programs.md
+    #- Overview: Program/proof-programs.md  
+  - FAQ: faq.md
   - About: about/about.md
 
 copyright: (c) 2025 Karlsruhe Institute of Technology (KIT), Institute for Automation and Applied Informatics (IAI)

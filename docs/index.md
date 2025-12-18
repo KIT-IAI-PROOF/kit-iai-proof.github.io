@@ -47,7 +47,8 @@ Only if the user wants to create an own *Block*, he must provide an individually
         - [Configure a *Block Template*](Workflow/configure-block-template.md)
         - [Configure a *Program*](Workflow/configure-program.md)
         - [Configure an *Attachment*](Workflow/configure-attachment.md)
-    
+<br><br>
+- Frequently Asked Questions [(FAQ)](faq.md)      
 
 
 <!--
