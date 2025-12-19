@@ -54,7 +54,7 @@ Furthermore, the recipient of this documentation is an ordinary user, who likes 
 - [PROOF Overall Structure](Structure/proof-structure.md)
 - PROOF *Workflows*
     - [Workflow Structure](Workflow/proof-workflows.md)
-    - [Creating Workflows](Workflow/creating-workflows.md)
+    - [Creating Workflows](UI/creating-workflows.md)
     - [Monitoring Workflows](Workflow/monitoring-workflows.md)
 <!--
     - [Running Workflows](Workflow/running-workflows.md)
@@ -78,11 +78,11 @@ Furthermore, the recipient of this documentation is an ordinary user, who likes 
     - [Test Blocks and its Program](#testing-blocks-and-program)
 -->
 - PROOF UI  
-    - [Create a new *Workflow*](Workflow/creating-workflows.md)
+    - [Create a new *Workflow*](UI/creating-workflows.md)
     - [Start a *Workflow*](Workflow/proof-workflows.md#testing-workflows)
     - [Monitor a running *Workflow*](Workflow/monitoring-workflows.md)
-    - [Configure Elements](Workflow/configs-workflows.md)
-        - [Configure a *Workflow*](Workflow/configure-workflow.md)
+    - [Configure Elements](UI/configs.md)
+        - [Configure a *Workflow*](UI/configs.md#1-workflow-configs)
         - [Configure a *Block Template*](Workflow/configure-block-template.md)
         - [Configure a *Program*](Workflow/configure-program.md)
         - [Configure an *Attachment*](Workflow/configure-attachment.md)
@@ -104,7 +104,7 @@ Furthermore, the recipient of this documentation is an ordinary user, who likes 
 - [Creating Model Programs](Block/creating-model-programs.md)
 - [Testing Blocks and its Program](#testing-blocks-and-program)
 - [Import and Export of PROOF Elements](ImportExport/import-and-export-of-elements.md)
-    - [JSON Structures of PROOF Elements](structure/json-element-structures.md)
+    - [JSON Structures of PROOF Elements](Structure/json-element-structures.md)
 
 <!-- [PROOF UI](#proof-ui)  
   - [Workflow Editor](#ui-workflow-editor)

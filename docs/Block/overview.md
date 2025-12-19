@@ -51,7 +51,7 @@ Inputs are the data that a Block receives from other Blocks or external sources.
 1. **Dynamic Inputs**: These are the actual data that the Block needs to process. They can be of various types, such as numerical values, strings, or complex data structures.
 2. **Static Data Inputs**: These are parameters or settings for the initialization of the Wrapper at startup. They are not changed during the execution of the Block and are used to configure the Worker's behavior.
 
-Both types of inputs can be **required** or **optional**, depending on the Block's definition (see [Creating new Blocks and Templates](using-proof-blocks.md#creating-new-templates)).
+Both types of inputs can be **required** or **optional**, depending on the Block's definition (see [Creating new Blocks and Templates](creating-new-templates.md)).
 
 ## Outputs
 
@@ -89,6 +89,6 @@ They are used to notify the orchestrator when a Block has finished the simulatio
 
 See also:
 
-- [Creating new Blocks and Templates](using-proof-blocks.md#creating-new-templates)
+- [Creating new Blocks and Templates](creating-new-templates.md)
     - [Creating Model Programs](creating-model-programs.md)
     - [Testing Blocks and its Program](testing-blocks-and-program.md)

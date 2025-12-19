@@ -17,5 +17,5 @@ Alternatively, you can also start a saved *Workflow* from the *Monitoring* panel
 
 # Use own Blocks
 
-It is also possible to create your own *Blocks* by defining new *Templates* in PROOF. For this, see [Creating new Block Templates](creating-new-templates.md).
+It is also possible to create your own *Blocks* by defining new *Templates* in PROOF. For this, see [Creating new Block Templates](../Block/creating-new-templates.md).
 

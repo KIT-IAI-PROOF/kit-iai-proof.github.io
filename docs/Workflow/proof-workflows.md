@@ -18,5 +18,5 @@ see: [Workflow Monitoring](monitoring-workflows.md)
 
 ## Configuring Workflows
 
-see: [Workflow Configuration](../Overview/configs.md#1-workflow-configs)
+see: [Workflow Configuration](../UI/configs.md#1-workflow-configs)
  

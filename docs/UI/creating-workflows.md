@@ -23,7 +23,7 @@ It provides a visual representation of the Workflow structure, allowing users to
    - This establishes a data flow between the Blocks, allowing them to communicate and share data.
    - When trying to connect Blocks, only compatible input and output pins are connectable. Compatible pins have the same color and data type.
 
-    ![Connect Blocks](images/2025-07-04_ConnectBlocks.png)
+    ![Connect Blocks](../Workflow/images/2025-07-04_ConnectBlocks.png)
 
 <br><br>
 
@@ -31,7 +31,7 @@ It provides a visual representation of the Workflow structure, allowing users to
    - You can configure the settings of the Workflow by clicking on the "Settings" button in the top right corner of the Workflow Editor.
    - This allows you to set ID, label, description, paradigm, and asynchronous Action for the entire Workflow.
    - By clicking on the "save" button, the Workflow settings are saved.
-   - ![Configure Workflow Settings](images/2025-10-29_WorkflowSettings.jpg)
+   - ![Configure Workflow Settings](../Workflow/images/2025-07-04_ConfigureWorkflow.png)
 
 
 
@@ -42,7 +42,7 @@ It provides a visual representation of the Workflow structure, allowing users to
      
 
 
-   - ![Configure Block Settings](images/2025-07-04_ConfigureBlocks.png)
+   - ![Configure Block Settings](../Workflow/images/2025-07-04_ConfigureBlocks.png)
 
 <br><br>
 
@@ -50,7 +50,7 @@ It provides a visual representation of the Workflow structure, allowing users to
 ## Save the *Workflow*
    - Once you have built your Workflow, you must save it by clicking on the "Save" button in the top right corner of the Workflow Editor.
    - This saves the Workflow to the PROOF database, making it available for execution and further editing.
-   - ![Save Workflow](images/2025-07-04_SaveWorkflow.png)
+   - ![Save Workflow](../Workflow/images/2025-07-04_SaveWorkflow.png)
 
 
 ## Executing the Workflow via Workflow Editor
@@ -66,4 +66,4 @@ It provides a visual representation of the Workflow structure, allowing users to
    - Enter all necessary attribute values in the pop-up execution dialog, such as Execution Label, Description, and all start values for the given Inputs.
    - Monitor the execution progress and view results through the Workflow Monitoring interface.
    
-   - ![Run Workflow](images/2025-10-29_MonitoringTable.jpg)
+   - ![Run Workflow](../Workflow/images/2025-07-16_Monitoring.png)

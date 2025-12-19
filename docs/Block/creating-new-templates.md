@@ -9,7 +9,7 @@ For this case you need to create a new *Block Template* that defines the structu
 This can be done with the PROOF UI and the menu *config*:
 
 <figure markdown="span">
-  ![config menu](../images/2025-06-27_Start_menu_Config_selected.jpg){ width="600" }
+  ![config menu](../Images/2025-06-27_Start_menu_Config_selected.jpg){ width="600" }
 </figure>
 
 # Structure of a Template

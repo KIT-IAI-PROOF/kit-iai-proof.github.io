@@ -18,8 +18,8 @@ The PROOF elements are ordered hierarchically, meaning that some elements rely o
 All elements are defined using a JSON structure, which includes metadata, configurations, and references to dependent elements. This standardized format allows for easy import and export of elements between different PROOF instances.
 For more details on the JSON structure of each element, please refer to the respective documentation sections:
 
-- [JSON Structure of a Workflow](structure/json-structure-of-a-workflow.md)
-- [JSON Structure of a Block](structure/json-structure-of-a-block.md)
+- [JSON Structure of a Workflow](../Structure/json-structure-of-a-workflow.md)
+- [JSON Structure of a Block](../Structure/json-structure-of-a-block.md)
 - 
 
 A PROOF *Workflow* can be exported as a JSON file that contains all the necessary information about the workflow, including its structure, references to *Blocks", connections, and configurations. This JSON file can then be imported into another PROOF instance to recreate the same workflow.
