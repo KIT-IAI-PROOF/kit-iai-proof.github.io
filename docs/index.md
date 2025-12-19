@@ -79,13 +79,13 @@ Furthermore, the recipient of this documentation is an ordinary user, who likes 
 -->
 - PROOF UI  
     - [Create a new *Workflow*](UI/creating-workflows.md)
-    - [Start a *Workflow*](Workflow/proof-workflows.md#testing-workflows)
+    - [Start a *Workflow*](Workflow/monitoring-workflows.md#2-run-workflow)
     - [Monitor a running *Workflow*](Workflow/monitoring-workflows.md)
     - [Configure Elements](UI/configs.md)
         - [Configure a *Workflow*](UI/configs.md#1-workflow-configs)
-        - [Configure a *Block Template*](Workflow/configure-block-template.md)
-        - [Configure a *Program*](Workflow/configure-program.md)
-        - [Configure an *Attachment*](Workflow/configure-attachment.md)
+        - [Configure a *Block Template*](UI/configs.md#2-templates-configs)
+        - [Configure a *Program*](UI/configs.md#3-programs-configs)
+        - [Configure an *Attachment*](UI/configs.md#4-attachments-configs)
 <br><br>
 - Frequently Asked Questions [(FAQ)](faq.md)      
 
@@ -102,9 +102,11 @@ Furthermore, the recipient of this documentation is an ordinary user, who likes 
 ## Documentation for Developers  
 
 - [Creating Model Programs](Block/creating-model-programs.md)
-- [Testing Blocks and its Program](#testing-blocks-and-program)
+<!--
+- [Testing Blocks and its Program](testing-blocks-and-program)
 - [Import and Export of PROOF Elements](ImportExport/import-and-export-of-elements.md)
     - [JSON Structures of PROOF Elements](Structure/json-element-structures.md)
+-->
 
 <!-- [PROOF UI](#proof-ui)  
   - [Workflow Editor](#ui-workflow-editor)
@@ -121,7 +123,9 @@ Furthermore, the recipient of this documentation is an ordinary user, who likes 
     - [Configure Block Attachments](#ui-configure-block-attachments)
     - [Configure Block Programs](#ui-configure-block-programs)
 -->
+<!--
 - Prospects for Version 2 coming End of 2025
+-->
 
 
 <!--
