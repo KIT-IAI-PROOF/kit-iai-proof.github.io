@@ -51,9 +51,19 @@ Furthermore, the recipient of this documentation is an ordinary user, who likes 
     - [Local Execution, Docker, and Kubernetes](#local-docker-kubernetes)
 -->
 - [Getting Started](GettingStarted/getting-started.md)
-
 - [PROOF Overall Structure](Structure/proof-structure.md)
-<br>
+- PROOF *Workflows*
+    - [Workflow Structure](Workflow/proof-workflows.md)
+    - [Creating Workflows](Workflow/creating-workflows.md)
+    - [Monitoring Workflows](Workflow/monitoring-workflows.md)
+<!--
+    - [Running Workflows](Workflow/running-workflows.md)
+-->
+- PROOF *Blocks* and *Templates*
+    - [Definition](Block/overview.md)
+    - [Using Blocks](Block/using-proof-blocks.md)
+    - [Creating new Blocks](Block/creating-new-templates.md)
+<!--
 - PROOF *Workflows*
     - [Workflow Structure](Workflow/proof-workflows.md#workflow-structure)
     - [Creating new Workflows](Workflow/proof-workflows.md#creating-new-workflows)
@@ -66,7 +76,7 @@ Furthermore, the recipient of this documentation is an ordinary user, who likes 
     - [Create new Block Templates](Block/creating-new-templates)
     - [Create Model Programs](Block/creating-model-programs)
     - [Test Blocks and its Program](#testing-blocks-and-program)
-<br><br>
+-->
 - PROOF UI  
     - [Create a new *Workflow*](Workflow/creating-workflows.md)
     - [Start a *Workflow*](Workflow/proof-workflows.md#testing-workflows)
