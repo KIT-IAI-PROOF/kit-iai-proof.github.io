@@ -1,4 +1,4 @@
-#Use Blocks </H1>
+# Use Blocks
 
 *Blocks* are used to create workflows in PROOF. Each *Block* represents a specific functionality or model that can be executed within a workflow.
 
@@ -15,7 +15,7 @@ When selecting a *Block* on the canvas, you can see and configure some of its se
 If the *Workflow* is complete, you can save it and execute it using the *START WORKFLOW* button in the right upper corner of the *PROOF Workflow Editor*.
 Alternatively, you can also start a saved *Workflow* from the *Monitoring* panel in the PROOF UI (2nd menu in the left sidebar).
 
-#Use own Blocks
+# Use own Blocks
 
 It is also possible to create your own *Blocks* by defining new *Templates* in PROOF. For this, see [Creating new Block Templates](creating-new-templates.md).
 
