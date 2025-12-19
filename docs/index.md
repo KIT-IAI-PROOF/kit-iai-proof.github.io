@@ -5,27 +5,54 @@
 > We are continuously working on improving and expanding the content. If you encounter any issues or have suggestions, 
 > please feel free to reach out to the development team.
 
-PROOF is a co-simulation framework that allows users to create and manage complex workflows.
-This documentation provides an overview of the structure and components of the *PROOF Workflows* and *PROOF Blocks*, 
-which are reusable units within the PROOF environment.
+## Introduction
+PROOF is a co-simulation framework that allows users to create and manage complex workflows. 
 
-The first published version of PROOF focuses on Docker-based simulations, while local execution and Kubernetes-based deployments will be 
-available in the near future (2026).
-Furthermore, the recipient of this documentation is an ordinary user, who likes to run simulations in an easy way.
+The PROOF UI provides a user-friendly interface for creating and managing workflows.
 
+Basic Docker knowledge is required to start and interact with the first version.
+
+### Basic Execution Options
+PROOF is designed to run in the following<!--different--> environments:
+
+1. **Docker**: Use Docker to containerize your PROOF environment, making it easy to use on the system.
+
+<!--
+2. **Local Execution**: Run PROOF on your local machine without Docker or Kubernetes. 
+This is suitable for developers, who want to create and test own *Blocks*. Here, PROOF runs directly on the host operating system and each *Block* is performed in an own terminal.
+**This feature will be available in the next release (2026)**.
+
+3. (**Kubernetes**): Deploy PROOF on a Kubernetes cluster for scalable and distributed execution. This is ideal for production environments where you need to manage multiple workflows and blocks efficiently. 
+**This feature will be available in the next release (2026)**.
+-->
+
+<!--
 The concept of PROOF is to provide a co-simulation platform, which is easy to use for non-expert users. They can create workflows by using predefined *Blocks* or by creating their own *Blocks* based on custom models without being forced to program. 
 Only if the user wants to create an own *Block*, he must provide an individually programmed model execution file. For more details see [Creating new Block Templates](Block/creating-new-templates).
-<br><br>
+
+It is based on three platforms, where the PROOF UI provides a user-friendly interface for creating and managing workflows, 
+the PROOF Orchestrator manages the execution of workflows and their blocks, and the PROOF Worker executes the logic of each block.
+
+This documentation provides an overview of the structure and components of the *PROOF Workflows* and *PROOF Blocks*, 
+which are reusable units within the PROOF environment.
+-->
+
+<!--
+The first published version of PROOF focuses on Docker-based simulations, while local execution and Kubernetes-based deployments will be available in the near future (2026).
+Furthermore, the recipient of this documentation is an ordinary user, who likes to run simulations in an easy way.
+-->
+
+<br>
 
 ### Table of Contents
-
+<!--
 - [Introduction](#introduction)
-<!--  - [Basic Execution Options](#basic-execution-options)
+  - [Basic Execution Options](#basic-execution-options)
     - [Local Execution, Docker, and Kubernetes](#local-docker-kubernetes)
 -->
 
 - [PROOF Overall Structure](Structure/proof-structure.md)
-<br><br>
+<br>
 - PROOF *Workflows*
     - [Workflow Structure](Workflow/proof-workflows.md#workflow-structure)
     - [Creating new Workflows](Workflow/proof-workflows.md#creating-new-workflows)
@@ -84,44 +111,7 @@ Only if the user wants to create an own *Block*, he must provide an individually
     - [Configure Block Programs](#ui-configure-block-programs)
 -->
 - Prospects for Version 2 coming End of 2025
-    
-# Introduction
-PROOF is a co-simulation framework that allows users to create and manage complex workflows. 
-It is based on 3 platforms, where the PROOF UI provides a user-friendly interface for creating and managing workflows, 
-the PROOF Orchestrator manages the execution of workflows and their blocks, and the PROOF Worker executes the logic of each block.
 
-
-## Basic Execution Options
-PROOF is designed to run in different environments:
-
-1. **Docker**: Use Docker to containerize your PROOF environment, making it easy to use on the system.
-
-<!--
-2. **Local Execution**: Run PROOF on your local machine without Docker or Kubernetes. 
-This is suitable for developers, who want to create and test own *Blocks*. Here, PROOF runs directly on the host operating system and each *Block* is performed in an own terminal.
-**This feature will be available in the next release (2026)**.
-
-3. (**Kubernetes**): Deploy PROOF on a Kubernetes cluster for scalable and distributed execution. This is ideal for production environments where you need to manage multiple workflows and blocks efficiently. 
-**This feature will be available in the next release (2026)**.
--->
-
-# Prerequisites
-
-To run PROOF in different environments, ensure you have the following prerequisites installed:
-
-### Execution with Docker
-The Docker environment (Docker engine) must be installed on your host system.
-All other required components are provided via Docker images.
-
-**Exception:** If you want to create your own *Blocks*, you need to have Python, Java, or MATLAB installed on your host system to create and test the model programs.
-
-<!--
-### Local Execution
-will be documented in the next release (2026)
-
-### Execution with Kubernetes
-will be documented in the next release (2026)
--->
 
 <!--
 # PROOF Structure
