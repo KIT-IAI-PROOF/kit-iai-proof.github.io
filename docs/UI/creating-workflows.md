@@ -9,14 +9,11 @@ It provides a visual representation of the Workflow structure, allowing users to
    - You can create a new Workflow by clicking on the "*+*" button in the Workflow Editor to the right of the Workflow combo box .
    - This opens a new empty Workflow canvas where you can start building your Workflow.
    
-
-
 ## Add PROOF *Blocks* to the *Workflow* from *Block Templates*
    - You can drag and drop *Block Templates* from the right sidebar onto the Workflow canvas.
    - Each Block Template represents a predefined specific functionality or model that can be used in the Workflow.
    - A *Block* is created as an instance of the *Block Template* when it is added to the Workflow.
    - The connectable inputs and outputs of each Block are represented by small circles on the left and right sides of the Block, respectively.
-   
    
 ## Connect Blocks
    - You can connect Blocks by clicking on the output of one Block and dragging it to the input of another Block.
