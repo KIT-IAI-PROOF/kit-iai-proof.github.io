@@ -24,19 +24,20 @@ theme:
 
 
 nav:
-  - Blocks:
-    - Overview: Block/overview.md
-    - Using Blocks: Block/using-proof-blocks.md
-    - Creating new Blocks: Block/creating-new-templates.md
-      # - Changing Blocks: Block/using-proof-blocks.md
+  - Installation: Installation/installation.md
   - Workflow:
     - Overview: Workflow/proof-workflows.md
     - Creating Workflows: Workflow/creating-workflows.md
     - Running Workflows: Workflow/running-workflows.md
     - Monitoring Workflows: Workflow/monitoring-workflows.md
-  - Program: Program/proof-programs.md
+  - Blocks:
+    - Overview: Block/overview.md
+    - Using Blocks: Block/using-proof-blocks.md
+    - Creating new Blocks: Block/creating-new-templates.md
+      # - Changing Blocks: Block/using-proof-blocks.md
+  #- Program: Program/proof-programs.md
     #- Overview: Program/proof-programs.md  
   - FAQ: faq.md
-  - About: about/about.md
+  - About: About/about.md
 
 copyright: (c) 2025 Karlsruhe Institute of Technology (KIT), Institute for Automation and Applied Informatics (IAI)
