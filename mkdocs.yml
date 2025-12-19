@@ -25,18 +25,21 @@ theme:
 
 nav:
   - Getting Started: GettingStarted/getting-started.md
-  - Workflow:
-    - Overview: Workflow/proof-workflows.md
-    - Creating Workflows: Workflow/creating-workflows.md
-    - Running Workflows: Workflow/running-workflows.md
+  - Workflows:
+    - Workflow Structure: Workflow/proof-workflows.md
+    - Creating Workflows: UI/creating-workflows.md
     - Monitoring Workflows: Workflow/monitoring-workflows.md
   - Blocks:
-    - Overview: Block/overview.md
-    - Using Blocks: Block/using-proof-blocks.md
+    - Introduction: Block/overview.md
+    - Using Blocks: UI/using-proof-blocks.md
     - Creating new Blocks: Block/creating-new-templates.md
-      # - Changing Blocks: Block/using-proof-blocks.md
+    #- Changing Blocks: Block/using-proof-blocks.md
   #- Program: Program/proof-programs.md
-    #- Overview: Program/proof-programs.md  
+    #- Overview: Program/proof-programs.md 
+  - UI:
+    - Creating Workflows: UI/creating-workflows.md
+    - Monitoring: Workflow/monitoring-workflows.md
+    - Configuration: UI/configs.md
   - FAQ: faq.md
   - About: About/about.md
 
