@@ -18,7 +18,7 @@ To ease the generation of new *Model Programs*, a template Python script is prov
 
 
 
-In PROOF, a *Block Template* defines the structure and functionality of a *Block*, i.e. ia *Block* is an instance of a *Template*. 
+In PROOF, a *Block Template* defines the structure and functionality of a *Block*, i.e. a *Block* is an instance of a *Template*. 
 Such a *Block* can be reused multiple times in different workflows. 
 Creating a new *Block Template* involves several steps, including defining the *Block's* inputs, outputs, and execution logic.
 

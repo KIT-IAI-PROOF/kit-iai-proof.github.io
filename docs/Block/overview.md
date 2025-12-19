@@ -63,9 +63,9 @@ Messages are used to notify Blocks about changes in the state of the Workflow, s
 There are three types of messages:
 
 ###<H4>Synchronization Messages (SYNC)</H4>
-These messages are sent to the workers by the orchestrator to synchronize the simulation process. For the several simulation phases exist different synchronization messages:
+These messages are sent to the workers by the orchestrator to synchronize the simulation process. Different synchronization messages exist for the several simulation phases:
 
-   1. **Initialization Messages (INIT)**: These messages sends the orchestrator to the Workers to initialize the Blocks with the necessary (static) inputs and configuration.
+   1. **Initialization Messages (INIT)**: The orchestrator sends these messages to the Workers to initialize the Blocks with the necessary (static) inputs and configuration.
    2. **Execution Messages (EXECUTE)** are sent to the Workers to start the execution of the Block's logic. Execution Messages are sent multiple times during the simulation process.
    3. **Finalization Messages (FINALIZE)** are sent to the Workers to terminate the Block's execution.
    4. **Shutdown Messages (SHUTDOWN)** are sent to the Workers to clean up resources.

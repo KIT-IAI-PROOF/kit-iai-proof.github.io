@@ -13,7 +13,7 @@ The first published version of PROOF focuses on Docker-based simulations, while 
 available in the near future (2026).
 Furthermore, the recipient of this documentation is an ordinary user, who likes to run simulations in an easy way.
 
-The concept of PROOF is to provide a co-simulation paltform, which is easy to use for non-expert users. They can create workflows by using predefined *Blocks* or by creating their own *Blocks* based on custom models without being forced to program. 
+The concept of PROOF is to provide a co-simulation platform, which is easy to use for non-expert users. They can create workflows by using predefined *Blocks* or by creating their own *Blocks* based on custom models without being forced to program. 
 Only if the user wants to create an own *Block*, he must provide an individually programmed model execution file. For more details see [Creating new Block Templates](Block/creating-new-templates).
 <br><br>
 
@@ -60,11 +60,11 @@ Only if the user wants to create an own *Block*, he must provide an individually
 - [PROOF Programs](Program/proof-programsmd)
 - [Test Blocks and its Program](#testing-blocks-and-program) -->
 
-##Documentation for Developers  
+## Documentation for Developers  
 
 - [Creating Model Programs](Block/creating-model-programs.md)
 - [Testing Blocks and its Program](#testing-blocks-and-program)
-- [Import and Export of PROOF Elements]
+- [Import and Export of PROOF Elements](ImportExport/import-and-export-of-elements.md)
     - [JSON Structures of PROOF Elements](structure/json-element-structures.md)
 
 <!-- [PROOF UI](#proof-ui)  

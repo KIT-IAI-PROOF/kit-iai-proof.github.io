@@ -29,4 +29,4 @@ Logs are available in the *Monitoring* panel of the PROOF UI. Select a workflow 
 - [Programs](Program/proof-programs.md): Program structure and creation
 
 ### Who should I contact for support?
-For questions, issues, or suggestions, please contact the PROOF development team at KIT (Karlsruhe Institute of Technology) at *proof(at)iai.kit.edu*.
+For questions, issues, or suggestions, please contact the PROOF development team at KIT (Karlsruhe Institute of Technology) at *proof@iai.kit.edu*.
