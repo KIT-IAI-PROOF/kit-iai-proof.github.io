@@ -30,12 +30,14 @@ Blocks consist of several components that define their structure and functionali
 The main components of a Block are *Worker, Wrapper, Inputs, Outputs, and Communication via Messages (Events)*.
 
 ## Worker
+<span style="color:blue">Target audience: Developers</span>
 
 The Worker is the core component of a Block that executes the main functionality.
 It is responsible for running the model or executable associated with the Block and can be regarded as the neutral part of the Block.
 It handles the execution logic, including initialization, execution, and termination of the model or executable.
 
 ## Wrapper
+<span style="color:blue">Target audience: Developers</span>
 
 The Wrapper is the model itself that can be realized in various programming languages such as Python, Java, or MATLAB.
 It is started by the Worker as a background process and is responsible for executing the model's logic and serves as a bridge between the Worker and the model, providing the necessary interface for the Worker to interact with the model.
@@ -49,7 +51,7 @@ Inputs are the data that a Block receives from other Blocks or external sources.
 1. **Dynamic Inputs**: These are the actual data that the Block needs to process. They can be of various types, such as numerical values, strings, or complex data structures.
 2. **Static Data Inputs**: These are parameters or settings for the initialization of the Wrapper at startup. They are not changed during the execution of the Block and are used to configure the Worker's behavior.
 
-Both types of inputs can be **required** or **optional**, depending on the Block's definition (see [Creating new Blocks and Templates](using-proof-Blocks.md#creating-new-templates)).
+Both types of inputs can be **required** or **optional**, depending on the Block's definition (see [Creating new Blocks and Templates](using-proof-blocks.md#creating-new-templates)).
 
 ## Outputs
 
