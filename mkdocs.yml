@@ -24,7 +24,7 @@ theme:
 
 
 nav:
-  - Installation: Installation/installation.md
+  - Getting Started: GettingStarted/getting-started.md
   - Workflow:
     - Overview: Workflow/proof-workflows.md
     - Creating Workflows: Workflow/creating-workflows.md

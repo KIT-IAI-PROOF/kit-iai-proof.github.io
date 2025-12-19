@@ -53,3 +53,15 @@ localhost:80
 Due to caching behaviour in some browsers, we **strongly recommend** opening the PROOF UI in a **private browser window** at this moment.
 
 To access the workflow creation editor, the credentials to be used are *test/test*.
+
+## Data exchange
+Data exchange with PROOF currently works via the `proof-environment/data` folder. All files laying in this folder can be accessed e.g. in the *FileLineProvider* block to be read from.
+
+# Test your installation
+To test your installation, you can use the workflow *FileReader2FileWriter*. It contains two blocks: the *FileReader* which reads a file given as input parameter and provides the next line each step and the *FileWriter* which receives data and appends it to the file which name is given as an input parameter.
+
+When you see in the Orchestrator logs that all blocks are shutdown, can can check the contents of the output file (e.g. *out.txt*) which should be the same as the *input.txt* file.
+```
+cd proof-environment/data
+cat out.txt
+```

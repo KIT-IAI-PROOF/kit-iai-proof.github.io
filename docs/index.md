@@ -50,7 +50,7 @@ Furthermore, the recipient of this documentation is an ordinary user, who likes 
   - [Basic Execution Options](#basic-execution-options)
     - [Local Execution, Docker, and Kubernetes](#local-docker-kubernetes)
 -->
-- [Installation](Installation/installation.md)
+- [Getting Started](GettingStarted/getting-started.md)
 
 - [PROOF Overall Structure](Structure/proof-structure.md)
 <br>
