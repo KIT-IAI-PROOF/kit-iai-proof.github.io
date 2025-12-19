@@ -29,6 +29,12 @@ Follow these steps to start and run PROOF.
 ## Get proof-environment
 To install PROOF, move to the repository [proof-environment](https://github.com/KIT-IAI-PROOF/proof-environment) and clone the repository to your local file system. We recommend creating a PROOF directory for this purpose. To clone the repository using a cli, make sure you have **git** installed on your local machine. Alternatively, you can download the zip-file of proof-environment.
 
+## Download the worker image
+The docker image for the (python) worker needs to be downloaded manually using the following command in a terminal/command line:
+```
+docker pull ghcr.io/kit-iai-proof/proof-worker-python:1.0.0
+```
+
 ## Start PROOF
 To start PROOF, navigate to the following folder within proof-environment:
 ```
