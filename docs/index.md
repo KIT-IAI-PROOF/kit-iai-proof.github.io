@@ -60,8 +60,8 @@ Furthermore, the recipient of this documentation is an ordinary user, who likes 
     - [Running Workflows](Workflow/running-workflows.md)
 -->
 - PROOF *Blocks* and *Templates*
-    - [Definition](Block/overview.md)
-    - [Using Blocks](Block/using-proof-blocks.md)
+    - [Introduction](Block/overview.md)
+    - [Using Blocks](UI/using-proof-blocks.md)
     - [Creating new Blocks](Block/creating-new-templates.md)
 <!--
 - PROOF *Workflows*

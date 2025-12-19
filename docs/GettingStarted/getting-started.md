@@ -21,7 +21,6 @@ will be documented in the next release (2026)
 ### Execution with Kubernetes
 will be documented in the next release (2026)
 -->
-<br>
 
 # Installation
 Follow these steps to start and run PROOF.

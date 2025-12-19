@@ -23,7 +23,8 @@ Logs are available in the *Monitoring* panel of the PROOF UI. Select a workflow 
 ## Getting Help
 
 ### Where can I find more documentation?
-- [Overview](overview/overview.md): General PROOF concepts
+- [Getting Started](GettingStarted/getting-started.md): Getting started with PROOF
+- [Structure](Structure/proof-structure.md): PROOF structure and concepts
 - [Blocks](Block/overview.md): Block structure and components
 - [Workflows](Workflow/proof-workflows.md): Workflow creation and management
 - [Programs](Program/proof-programs.md): Program structure and creation
