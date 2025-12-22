@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Creating new Blocks - PROOF Documentation</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../css/brands.min.css" rel="stylesheet">
+        <link href="../../css/solid.min.css" rel="stylesheet">
+        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">PROOF Documentation</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../../GettingStarted/getting-started/" class="nav-link">Getting Started</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Workflows</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../Workflow/proof-workflows/" class="dropdown-item">Workflow Structure</a>
+</li>
+                                    
+<li>
+    <a href="../../UI/creating-workflows/" class="dropdown-item">Creating Workflows</a>
+</li>
+                                    
+<li>
+    <a href="../../Workflow/monitoring-workflows/" class="dropdown-item">Monitoring Workflows</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Blocks</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../overview/" class="dropdown-item">Introduction</a>
+</li>
+                                    
+<li>
+    <a href="../../UI/using-proof-blocks/" class="dropdown-item">Using Blocks</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">Creating new Blocks</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">UI</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../UI/creating-workflows/" class="dropdown-item">Creating Workflows</a>
+</li>
+                                    
+<li>
+    <a href="../../Workflow/monitoring-workflows/" class="dropdown-item">Monitoring Workflows</a>
+</li>
+                                    
+<li>
+    <a href="../../UI/configs/" class="dropdown-item">Configuration</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../faq/" class="nav-link">FAQ</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../About/about/" class="nav-link">About</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../../UI/using-proof-blocks/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../../UI/creating-workflows/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item dropdown">
+                              <button id="theme-menu" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static" aria-label="Toggle theme" class="nav-link dropdown-toggle">
+                                <i class="fa-solid fa-circle-half-stroke fa-fw"></i>
+                                <span class="d-lg-none ms-2">Toggle theme</span>
+                              </button>
+                              <ul class="dropdown-menu dropdown-menu-end">
+                                <li>
+                                  <button class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="true">
+                                    <i class="fa-solid fa-sun fa-fw"></i>
+                                    <span class="ms-2">Light</span>
+                                    <i class="fa-solid fa-check ms-auto"></i>
+                                  </button>
+                                </li>
+                                <li>
+                                  <button class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+                                    <i class="fa-solid fa-moon fa-fw"></i>
+                                    <span class="ms-2">Dark</span>
+                                    <i class="fa-solid fa-check ms-auto d-none"></i>
+                                  </button>
+                                </li>
+                                <li>
+                                  <button class="dropdown-item d-flex align-items-center" data-bs-theme-value="auto" aria-pressed="false">
+                                    <i class="fa-solid fa-circle-half-stroke fa-fw"></i>
+                                    <span class="ms-2">Auto</span>
+                                    <i class="fa-solid fa-check ms-auto d-none"></i>
+                                  </button>
+                                </li>
+                              </ul>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <script src="../../js/darkmode.js"></script>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#creating-new-block-templates" class="nav-link">Creating new Block Templates</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#structure-of-a-template" class="nav-link">Structure of a Template</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#steps-to-create-a-new-template" class="nav-link">Steps to Create a New Template</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#create-a-template-in-proof-ui" class="nav-link">Create a Template in PROOF UI</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="creating-new-block-templates">Creating new Block Templates<a class="headerlink" href="#creating-new-block-templates" title="Permanent link">&para;</a></h1>
+<p>In PROOF, a <em>Block Template</em> defines the structure and functionality of a <em>Block</em>, i.e. a <em>Block</em> is an instance of a <em>Template</em>. 
+Such a <em>Block</em> can be reused multiple times in different workflows. 
+Creating a new <em>Block Template</em> involves several steps, including defining the <em>Block's</em> inputs, outputs, and execution logic.</p>
+<p>Creating new <em>Templates</em> offers the possibility to insert a desired behaviour or to implement specific functionalities or models to a Workflow.
+For this case you need to create a new <em>Block Template</em> that defines the structure and functionality of the block.
+This can be done with the PROOF UI and the menu <em>config</em>:</p>
+<figure>
+  <img alt="config menu" src="../../Images/2025-06-27_Start_menu_Config_selected.jpg" width="600" />
+</figure>
+<h1 id="structure-of-a-template">Structure of a Template<a class="headerlink" href="#structure-of-a-template" title="Permanent link">&para;</a></h1>
+<p>A <em>Template</em> consists of three main parts:</p>
+<ol>
+<li>
+<p>A <em>Program</em> entity that represents the physical simulation model as an executable file (such as a Python script, Java program, or MATLAB script) that contains the logic to be executed.</p>
+</li>
+<li>
+<p>Optionally, additional files or dependencies required for the model's execution.</p>
+</li>
+<li>
+<p>For Import/Export: A description file (in JSON format) that defines the <em>block's</em> metadata, inputs, outputs, and other configuration details. 
+json-structure-of-a-block.md</p>
+</li>
+</ol>
+<h1 id="steps-to-create-a-new-template">Steps to Create a New Template<a class="headerlink" href="#steps-to-create-a-new-template" title="Permanent link">&para;</a></h1>
+<ol>
+<li>
+<p><strong>Develop the Program</strong>:</p>
+<p><span style="color:red"><strong>Note:</strong> in PROOF version 1.0, only Python is supported. Therefore, the model file must be a Python script and the documentation hereafter refers to Python specifically.</span></p>
+<p>Create the executable model file that contains the model's logic. This file should be able to run independently and perform the required computations. For this, you can use any programming language supported by PROOF (e.g., Python, Java, MATLAB).</p>
+<p>This file will be the core of your <em>Block Template</em>. It can be built and should be able to be tested outside of PROOF to ensure it works as expected.
+The model file must be a subclass of <em>proofcore.base.basewrapper.py</em> and implement the required methods for initialization, execution (<em>step</em>), and termination.</p>
+</li>
+<li>
+<p><strong>Identify Attachments</strong></p>
+<p><em>Attachments</em> are additional files or dependencies required for the model's execution. They are attached to the <em>Program</em> entity and can include configuration files, libraries, or other resources needed by the model.
+One <em>Attachment</em> must be the model file created in step 1. This <em>Attachment</em> is called the <strong>entry point</strong> of the <em>Program</em> entity. Additional <em>Attachments</em> can be added as needed. </p>
+</li>
+</ol>
+<!--
+3. **Define the Template Metadata**
+
+    This step is only needed, if you want to import the *Template* from a JSON file and not create it directly in the PROOF UI. 
+For this, you need to create a JSON file that defines the *Template's* metadata, including its ID, label, description, inputs, outputs, and other configuration details. Further, the Program and the Attachments must be defined in the JSON file, too.
+The fixed structure of the JSON file is described in the [PROOF JSON Schema documentation](link to be added).
+-->
+
+<h1 id="create-a-template-in-proof-ui">Create a Template in PROOF UI<a class="headerlink" href="#create-a-template-in-proof-ui" title="Permanent link">&para;</a></h1>
+<p>To create a new <em>Template</em> in the PROOF UI, follow these steps:</p>
+<p>(<strong>Note:</strong>) It's recommended to create the <em>Attachments</em> at first, followed by the <em>Program</em> creation and finally the <em>Template</em> creation.</p>
+<ol>
+<li>
+<p>Select the <em>Config</em> menu on the left side of the UI. Here you can select the desired button for the configuration or creation of new elements. </p>
+</li>
+<li>
+<p>Create <em>Attachments</em>:</p>
+<ul>
+<li>Click on the <em>Attachments</em> button to open the <em>Attachments management interface</em>.</li>
+<li>Click on the "<strong>+ ADD</strong>" button to create a new <em>Attachment</em>.</li>
+<li>Fill in the required fields, such as ID, label, description, and upload the model file.</li>
+<li>Save the <em>Attachment</em>.</li>
+<li>Repeat this process for any additional <em>Attachments</em> needed for the <em>Program</em>.</li>
+</ul>
+<p><br></p>
+</li>
+<li>
+<p>Create a <em>Program</em>:</p>
+<ul>
+<li>Click on the <em>Programs</em> button to open the <em>Programs management interface</em>.</li>
+<li>Click on the "<strong>+ ADD</strong>" button to create a new <em>Program</em>.</li>
+<li>Fill in the required fields, such as ID, label, description, and select the previously created <em>Attachments</em>.</li>
+<li>Specify which <em>Attachment</em> is the entry point (the model file).</li>
+<li>Save the <em>Program</em>.</li>
+</ul>
+<p><br></p>
+</li>
+<li>
+<p>Create a <em>Template</em>:</p>
+<ul>
+<li>Click on the <em>Templates</em> button to open the <em>Templates management interface</em>.</li>
+<li>Click on the "<strong>+ ADD</strong>" button to create a new <em>Template</em>.</li>
+<li>Fill in the required fields, such as ID, label, description, and select the previously created <em>Program</em>.</li>
+<li>Define the inputs and outputs of the <em>Template</em> according to the model's requirements.</li>
+<li>Save the <em>Template</em>.</li>
+</ul>
+</li>
+</ol>
+<p>After having created a new <em>Template</em>, it can be used immediately to instantiate <em>Blocks</em> in <em>Workflows</em> using the  <em>PROOF Workflow Editor</em>. 
+You can find the <em>Template</em> in the right sidebar of the <em>PROOF Workflow Editor</em> and drag and drop it onto the <em>Workflow</em> canvas.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+                <p>(c) 2025 Karlsruhe Institute of Technology (KIT), Institute for Automation and Applied Informatics (IAI)</p>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

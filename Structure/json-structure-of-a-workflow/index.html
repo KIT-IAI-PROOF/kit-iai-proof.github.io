@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>JSON structure of a Workflow - PROOF Documentation</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../css/brands.min.css" rel="stylesheet">
+        <link href="../../css/solid.min.css" rel="stylesheet">
+        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">PROOF Documentation</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../../GettingStarted/getting-started/" class="nav-link">Getting Started</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Workflows</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../Workflow/proof-workflows/" class="dropdown-item">Workflow Structure</a>
+</li>
+                                    
+<li>
+    <a href="../../UI/creating-workflows/" class="dropdown-item">Creating Workflows</a>
+</li>
+                                    
+<li>
+    <a href="../../Workflow/monitoring-workflows/" class="dropdown-item">Monitoring Workflows</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Blocks</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../Block/overview/" class="dropdown-item">Introduction</a>
+</li>
+                                    
+<li>
+    <a href="../../UI/using-proof-blocks/" class="dropdown-item">Using Blocks</a>
+</li>
+                                    
+<li>
+    <a href="../../Block/creating-new-templates/" class="dropdown-item">Creating new Blocks</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">UI</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../UI/creating-workflows/" class="dropdown-item">Creating Workflows</a>
+</li>
+                                    
+<li>
+    <a href="../../Workflow/monitoring-workflows/" class="dropdown-item">Monitoring Workflows</a>
+</li>
+                                    
+<li>
+    <a href="../../UI/configs/" class="dropdown-item">Configuration</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../faq/" class="nav-link">FAQ</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../About/about/" class="nav-link">About</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item dropdown">
+                              <button id="theme-menu" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static" aria-label="Toggle theme" class="nav-link dropdown-toggle">
+                                <i class="fa-solid fa-circle-half-stroke fa-fw"></i>
+                                <span class="d-lg-none ms-2">Toggle theme</span>
+                              </button>
+                              <ul class="dropdown-menu dropdown-menu-end">
+                                <li>
+                                  <button class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="true">
+                                    <i class="fa-solid fa-sun fa-fw"></i>
+                                    <span class="ms-2">Light</span>
+                                    <i class="fa-solid fa-check ms-auto"></i>
+                                  </button>
+                                </li>
+                                <li>
+                                  <button class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+                                    <i class="fa-solid fa-moon fa-fw"></i>
+                                    <span class="ms-2">Dark</span>
+                                    <i class="fa-solid fa-check ms-auto d-none"></i>
+                                  </button>
+                                </li>
+                                <li>
+                                  <button class="dropdown-item d-flex align-items-center" data-bs-theme-value="auto" aria-pressed="false">
+                                    <i class="fa-solid fa-circle-half-stroke fa-fw"></i>
+                                    <span class="ms-2">Auto</span>
+                                    <i class="fa-solid fa-check ms-auto d-none"></i>
+                                  </button>
+                                </li>
+                              </ul>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <script src="../../js/darkmode.js"></script>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#json-structure-of-a-workflow" class="nav-link">JSON structure of a Workflow</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#description-of-the-json-fields" class="nav-link">Description of the JSON Fields</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="json-structure-of-a-workflow">JSON structure of a Workflow<a class="headerlink" href="#json-structure-of-a-workflow" title="Permanent link">&para;</a></h1>
+<p>For the import and export of PROOF <em>Workflows</em>, a JSON structure is used to define the <em>Workflow's</em> metadata and the references to associated <strong>Blocks</strong>.</p>
+<p>A <em>Workflow</em> JSON file typically includes the following key components:</p>
+<ul>
+<li><strong>Workflow Metadata</strong>: This section contains general information about the <em>Workflow</em>, such as its ID, name, description, etc.</li>
+<li><strong>Blocks</strong>: This section contains an array of <em>Block</em> references that are part of the <em>Workflow</em>. Each <em>Block</em> reference includes its unique identifier and configuration details.</li>
+<li><strong>Connections</strong>: This section defines the connections between the <em>Blocks</em> in the <em>Workflow</em>, specifying how data flows from one <em>Block</em> to another.</li>
+<li><strong>Parameters</strong>: This section includes any additional parameters or settings required for the <em>Workflow</em> execution.</li>
+</ul>
+<p>Here is as an example the JSON structure for the PROOF <em>Workflow</em> <em>FileReader2FileWriter</em>:</p>
+<pre><code class="language-json">{
+  &quot;id&quot;: &quot;WF-FileReader2FileWriter&quot;,
+  &quot;name&quot;: &quot;FileReader2FileWriter-Test&quot;,
+  &quot;description&quot;: &quot;The FileReader2FileWriter demo workflow reads an arbitrary file and writes the content to another file.&quot;,
+  &quot;communicationParadigm&quot;: &quot;STEPBASED&quot;,
+  &quot;blocks&quot;: [
+    {
+      &quot;localId&quot;: 0,
+      &quot;globalId&quot;: &quot;block_file_line_provider&quot;,
+    },
+    {
+      &quot;localId&quot;: 1,
+      &quot;globalId&quot;: &quot;block_file_writer&quot;
+    }
+  ],
+  &quot;connections&quot;: [
+    {
+      &quot;inbound&quot;: {
+        &quot;blockId&quot;: &quot;0&quot;,
+        &quot;portName&quot;: &quot;line&quot;
+      },
+      &quot;outbound&quot;: {
+        &quot;blockId&quot;: &quot;1&quot;,
+        &quot;portName&quot;: &quot;data&quot;
+      }
+    }
+  ],
+  &quot;stepBasedConfig&quot;: {
+    &quot;startPoint&quot;: 1,
+    &quot;endPoint&quot;: 10,
+    &quot;duration&quot;: 500,
+    &quot;stepSizeDefinitions&quot;: {
+      &quot;1&quot;: {
+        &quot;startPoint&quot;: 2,
+        &quot;endPoint&quot;: 10,
+        &quot;defaultSize&quot;: 1,
+        &quot;stepSizes&quot;: {}
+      }
+    }
+  },
+  &quot;simulationStrategy&quot;: &quot;WAIT_AND_CONTINUE&quot;
+}
+
+</code></pre>
+<p>This JSON structure can be used to import the <em>Workflow</em> into a PROOF installation or export it for sharing with others. 
+It is assumed that the referenced blocks already exist in th e PROOF database when the workflow is imported. 
+@TODO : Add link to 'import workflows'.</p>
+<h2 id="description-of-the-json-fields">Description of the JSON Fields<a class="headerlink" href="#description-of-the-json-fields" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>id</strong>: A unique identifier for the <em>Workflow</em>.</li>
+<li><strong>name</strong>: The display name of the <em>Workflow</em>.</li>
+<li><strong>description</strong>: A brief description of the <em>Workflow's</em> functionality.</li>
+<li><strong>communicationParadigm</strong>: The communication paradigm used in the <em>Workflow</em> (e.g., STEPBASED).</li>
+<li><strong>blocks</strong>: An array of <em>Block</em> references included in the <em>Workflow</em>. Each entry contains:</li>
+<li><strong>localId</strong>: A unique local identifier for the <em>Block</em> within the <em>Workflow</em>.</li>
+<li><strong>globalId</strong>: The global identifier of the <em>Block</em> template used.</li>
+<li><strong>connections</strong>: An array defining the connections between the referenced <em>Blocks</em>. Each connection includes:</li>
+<li><strong>inbound</strong>: The localId of the source <em>Block</em> and port name. The port name must match the name of an output name of the source <em>Block</em>.</li>
+<li><strong>outbound</strong>: The localId of the destination <em>Block</em> and port name. The port name must match the name of an input name of the target <em>Block</em>.</li>
+<li><strong>stepBasedConfig</strong>: Configuration details specific to step-based communication, including start and end points, duration, and step size definitions.</li>
+<li><strong>simulationStrategy</strong>: The strategy used for simulation execution (e.g., WAIT_AND_CONTINUE).</li>
+</ul></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+                <p>(c) 2025 Karlsruhe Institute of Technology (KIT), Institute for Automation and Applied Informatics (IAI)</p>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

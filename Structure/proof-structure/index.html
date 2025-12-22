@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>PROOF Overall Structure - PROOF Documentation</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../css/brands.min.css" rel="stylesheet">
+        <link href="../../css/solid.min.css" rel="stylesheet">
+        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">PROOF Documentation</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../../GettingStarted/getting-started/" class="nav-link">Getting Started</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Workflows</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../Workflow/proof-workflows/" class="dropdown-item">Workflow Structure</a>
+</li>
+                                    
+<li>
+    <a href="../../UI/creating-workflows/" class="dropdown-item">Creating Workflows</a>
+</li>
+                                    
+<li>
+    <a href="../../Workflow/monitoring-workflows/" class="dropdown-item">Monitoring Workflows</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Blocks</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../Block/overview/" class="dropdown-item">Introduction</a>
+</li>
+                                    
+<li>
+    <a href="../../UI/using-proof-blocks/" class="dropdown-item">Using Blocks</a>
+</li>
+                                    
+<li>
+    <a href="../../Block/creating-new-templates/" class="dropdown-item">Creating new Blocks</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">UI</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../UI/creating-workflows/" class="dropdown-item">Creating Workflows</a>
+</li>
+                                    
+<li>
+    <a href="../../Workflow/monitoring-workflows/" class="dropdown-item">Monitoring Workflows</a>
+</li>
+                                    
+<li>
+    <a href="../../UI/configs/" class="dropdown-item">Configuration</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../faq/" class="nav-link">FAQ</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../About/about/" class="nav-link">About</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item dropdown">
+                              <button id="theme-menu" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static" aria-label="Toggle theme" class="nav-link dropdown-toggle">
+                                <i class="fa-solid fa-circle-half-stroke fa-fw"></i>
+                                <span class="d-lg-none ms-2">Toggle theme</span>
+                              </button>
+                              <ul class="dropdown-menu dropdown-menu-end">
+                                <li>
+                                  <button class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="true">
+                                    <i class="fa-solid fa-sun fa-fw"></i>
+                                    <span class="ms-2">Light</span>
+                                    <i class="fa-solid fa-check ms-auto"></i>
+                                  </button>
+                                </li>
+                                <li>
+                                  <button class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+                                    <i class="fa-solid fa-moon fa-fw"></i>
+                                    <span class="ms-2">Dark</span>
+                                    <i class="fa-solid fa-check ms-auto d-none"></i>
+                                  </button>
+                                </li>
+                                <li>
+                                  <button class="dropdown-item d-flex align-items-center" data-bs-theme-value="auto" aria-pressed="false">
+                                    <i class="fa-solid fa-circle-half-stroke fa-fw"></i>
+                                    <span class="ms-2">Auto</span>
+                                    <i class="fa-solid fa-check ms-auto d-none"></i>
+                                  </button>
+                                </li>
+                              </ul>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <script src="../../js/darkmode.js"></script>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#proof-overall-structure" class="nav-link">PROOF Overall Structure</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#workflows" class="nav-link">Workflows</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#blocks-templates" class="nav-link">Blocks (Templates)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#ui" class="nav-link">UI</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#orchestrator" class="nav-link">Orchestrator</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#worker" class="nav-link">Worker</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#models" class="nav-link">Models</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="proof-overall-structure">PROOF Overall Structure<a class="headerlink" href="#proof-overall-structure" title="Permanent link">&para;</a></h1>
+<p><span style="color:blue">Target audience: Users and Developers</span></p>
+<p>PROOF is structured around the concept of <em>Workflows</em> and <em>Blocks</em>. There are six main components:</p>
+<h2 id="workflows">Workflows<a class="headerlink" href="#workflows" title="Permanent link">&para;</a></h2>
+<ul>
+<li>A workflow is a sequence of <em>Blocks</em> that are executed in a specific order.</li>
+<li>It defines how data flows between <em>Blocks</em> and how they are connected.</li>
+<li>A <em>Workflow</em> can be created, started, stopped, and monitored via the PROOF UI.
+<br></li>
+</ul>
+<h2 id="blocks-templates">Blocks (Templates)<a class="headerlink" href="#blocks-templates" title="Permanent link">&para;</a></h2>
+<ul>
+<li>A <em>Block</em> is a reusable unit of functionality that can be used multiple times in a single <em>Workflow</em> and in multiple <em>Workflows</em>.</li>
+<li>It is a copy of a <em>Block Template</em>, i.e., the structure and functionality is defined by the <em>Template</em> and can be reproduced as often as required,  </li>
+<li>Each <em>Block</em> has its own inputs, outputs, and execution logic.</li>
+<li>A <em>Block</em> can be connected with other <em>Blocks</em>, whereas output pins can be connected with input pins of another <em>Block</em>. 
+<br></li>
+</ul>
+<h2 id="ui">UI<a class="headerlink" href="#ui" title="Permanent link">&para;</a></h2>
+<ul>
+<li>The user interface (UI) provides a visual representation of <em>Workflows</em> and <em>Blocks</em>, allowing users to create, edit, and monitor <em>Workflows</em> easily.</li>
+<li>It allows users to create new <em>Workflows</em> by dragging and dropping <em>Blocks</em> from a template library onto a workflow canvas.</li>
+<li>Users can connect <em>Blocks</em> by linking their input and output pins to define the data flow between them.</li>
+<li>It provides configuration panels for <em>Workflows</em> and <em>Blocks</em>, allowing users to set parameters and options for each component.
+<br></li>
+</ul>
+<h2 id="orchestrator">Orchestrator<a class="headerlink" href="#orchestrator" title="Permanent link">&para;</a></h2>
+<ul>
+<li>The <em>Orchestrator</em> is built as a web service and is responsible for managing the execution of a <em>Workflow</em> and its <em>Blocks</em>, handling communication between them, and ensuring that the simulation runs controlled and efficiently.</li>
+<li>It creates the communication queues to the <em>Workers</em> via a message broker (RabbitMQ) and prepares the communication between the <em>Workers</em> in RabbitMQ, too.</li>
+<li>The <em>Orchestrator</em> starts (and stops) a <em>Workflow</em> by receiving a start (stop) message from the PROOF UI. </li>
+<li>During a simulation the <em>Orchestrator</em> sends synchronisation messages (SYNC) to the <em>Workers</em> to initiate the next simulation step.</li>
+<li>It waits for notify messages (NOTIFY) sent by the <em>Workers</em> when they have finished a step or a simulation phase (initialization, execution, finalization, and shutdown).
+<br></li>
+</ul>
+<h2 id="worker">Worker<a class="headerlink" href="#worker" title="Permanent link">&para;</a></h2>
+<ul>
+<li>The <em>Worker</em> is responsible for executing the logic of each <em>Block</em>, including running the model (i.e. the executable) associated with the <em>Block</em>.</li>
+<li>During initialization, the <em>Worker</em> starts the model program (Python, Java, or Matlab) as a background process. During the simulation, the <em>Worker</em> communicates with the model program. </li>
+<li>starts processing the model while it receives synchronisation messages (SYNC) from the <em>Orchestrator</em> and sends notify messages (NOTIFY) back to the <em>Orchestrator</em> when it has finished a simulation step or phase.
+<br></li>
+</ul>
+<h2 id="models">Models<a class="headerlink" href="#models" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Models are the underlying programs or scripts that are executed by the <em>Blocks</em>. They can be written in various programming languages such as Python, Java, or MATLAB.</li>
+</ul></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+                <p>(c) 2025 Karlsruhe Institute of Technology (KIT), Institute for Automation and Applied Informatics (IAI)</p>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
