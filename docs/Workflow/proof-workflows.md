@@ -5,18 +5,18 @@ A *PROOF Workflow* defines how blocks are coupled and which outputs and inputs a
 It follows a given structure that defines how blocks are connected and executed.
 
 The following images illustrate the structure of a Workflow:
+![PROOF Workflow Structure](../Images/2024-06-28_WorkflowHierarchy.png)
 
-<!-- ![PROOF Workflow Structure](2024-06-28_WorkflowHierarchy.png)  (without size) -->
+<!--<img src="2024-06-28_WorkflowHierarchy.png" alt="drawing with given size ..." width="800"/>-->
 
-<img src="2024-06-28_WorkflowHierarchy.png" alt="drawing with given size ..." width="800"/>
-
+## Creating workflows 
+see: [Creating Workflows](creating-workflows.md) 
 
 ## Monitoring a Workflow
 
-see: [Workflow Monitoring](../Workflow/monitoring-workflows.md)
+see: [Workflow Monitoring](monitoring-workflows.md)
 
-## Testing Workflows
+## Configuring Workflows
 
-see: [Workflow Structure](#workflow-structure)
-
-and see: [Creating new Workflows](#creating-new-workflows)  
+see: [Workflow Configuration](../UI/configs.md#1-workflow-configs)
+ 

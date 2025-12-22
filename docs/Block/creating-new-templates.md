@@ -9,7 +9,7 @@ For this case you need to create a new *Block Template* that defines the structu
 This can be done with the PROOF UI and the menu *config*:
 
 <figure markdown="span">
-  ![config menu](../images/2025-06-27_Start_menu_Config_selected.jpg){ width="600" }
+  ![config menu](../Images/2025-06-27_Start_menu_Config_selected.jpg){ width="600" }
 </figure>
 
 # Structure of a Template
@@ -40,12 +40,13 @@ The model file must be a subclass of *proofcore.base.basewrapper.py* and impleme
     *Attachments* are additional files or dependencies required for the model's execution. They are attached to the *Program* entity and can include configuration files, libraries, or other resources needed by the model.
 One *Attachment* must be the model file created in step 1. This *Attachment* is called the **entry point** of the *Program* entity. Additional *Attachments* can be added as needed. 
 
+<!--
 3. **Define the Template Metadata**
 
     This step is only needed, if you want to import the *Template* from a JSON file and not create it directly in the PROOF UI. 
 For this, you need to create a JSON file that defines the *Template's* metadata, including its ID, label, description, inputs, outputs, and other configuration details. Further, the Program and the Attachments must be defined in the JSON file, too.
 The fixed structure of the JSON file is described in the [PROOF JSON Schema documentation](link to be added).
-
+-->
 
 # Create a Template in PROOF UI
 To create a new *Template* in the PROOF UI, follow these steps:
