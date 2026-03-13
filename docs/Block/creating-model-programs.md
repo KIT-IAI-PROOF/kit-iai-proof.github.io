@@ -42,6 +42,5 @@ For detailed instructions on creating Block Templates in the PROOF UI, including
 - Creating Attachments (including your Model Program)
 - Creating Program entities
 - Defining Template metadata, inputs, and outputs
-- Naming restrictions and Docker compatibility requirements
 
 See the complete guide: [Creating new Block Templates](creating-new-templates.md)

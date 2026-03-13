@@ -22,14 +22,6 @@ and an unlimited number of instances can be built from that class.
 
 This means for the UI, that a Block is created when a Template is dragged onto the canvas.
 
-# Important naming restrictions:
-When setting the label (which becomes the block title), avoid using:
-- Brackets `()` or other special characters
-- The block title is used to create Docker container names, so it must follow Docker naming conventions
-
-
-<br>
-
 # Block Components
 
 Blocks consist of several components that define their structure and functionality.
@@ -97,4 +89,4 @@ See also:
 
 - [Creating new Blocks and Templates](creating-new-templates.md)
     - [Creating Model Programs](creating-model-programs.md)
-    - [Testing Blocks and its Program](testing-blocks-and-program.md)
+    <!-- - [Testing Blocks and its Program](testing-blocks-and-program.md) -->

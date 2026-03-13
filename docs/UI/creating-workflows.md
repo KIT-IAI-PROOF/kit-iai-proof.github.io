@@ -33,6 +33,20 @@ It provides a visual representation of the Workflow structure, allowing users to
      It is possible to change nearly all Template attributes as well as the associated Program and Attachments using the Template Configuration panel.
      ![Configure Block Settings](../Images/workflow/2025-07-04_ConfigureBlocks.png)
 
+### Important: Block Naming Restrictions
+When setting the block name/title, you must follow Docker container naming conventions:
+
+- **Do not use brackets `()` or other special characters** such as `!`, `@`, `#`, `$`, `%`, etc.
+- **Spaces in block titles are automatically removed** when creating Docker container names
+- Use only alphanumeric characters, hyphens `-`, and underscores `_`
+- The block title is used to create the Docker container name for that block
+
+**Examples:**
+- ✅ Good: `FileReader1`, `My_Block`, `Data-Processor`
+- ❌ Bad: `Reader(1)`, `My Block!`, `Data@Processor`
+
+Violating these restrictions will cause errors when executing the workflow, as Docker cannot create containers with invalid names.
+
 ## Save the *Workflow*
    - Once you have built your Workflow, you must save it by clicking on the "Save" button in the top right corner of the Workflow Editor.
    - This saves the Workflow to the PROOF database, making it available for execution and further editing.

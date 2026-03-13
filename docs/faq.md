@@ -55,11 +55,9 @@ You can also access container logs directly using Docker commands:
 ```
 docker logs <container-name>
 ```
-The container name is derived from the block title with spaces removed. 
+The container name is derived from the block title with spaces removed.
 
-**Important naming restrictions:**
-- Block titles should not contain brackets `()` or other special characters (Docker container naming restriction)
-- Spaces in block titles are automatically removed when creating container names
+**Note:** Block titles must follow Docker naming conventions (no brackets or special characters). See [Creating Workflows - Block Naming Restrictions](UI/creating-workflows.md#important-block-naming-restrictions) for details.
 
 ### I can't remove the "proof-files" volume. What should I do?
 If you receive an error when trying to remove the `proof-files` Docker volume, you need to remove all containers that are using this volume first.
