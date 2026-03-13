@@ -41,6 +41,8 @@ nav:
     - Monitoring: Workflow/monitoring-workflows.md
     - Configuration: UI/configs.md
   - FAQ: faq.md
-  - About: About/about.md
+  - About:
+    - About: About/about.md
+    - Release Notes: About/release-notes.md
 
 copyright: (c) 2025 Karlsruhe Institute of Technology (KIT), Institute for Automation and Applied Informatics (IAI)
