@@ -31,7 +31,7 @@ To install PROOF, move to the repository [proof-environment](https://github.com/
 ## Download the worker image
 The docker image for the (python) worker needs to be downloaded manually using the following command in a terminal/command line:
 ```
-docker pull ghcr.io/kit-iai-proof/proof-worker-python:1.0.0
+docker pull ghcr.io/kit-iai-proof/proof-worker-python:1.1.0
 ```
 
 ## Start PROOF
