@@ -6,7 +6,12 @@
 PROOF uses *Notify Messages* to communicate errors. When an error occurs, the orchestrator receives notification about the error location and reason. Check the monitoring panel and logs for error details.
 
 ### Where do I place files for my workflows to access?
-Place your files in the `proof-environment/data/userdata/` directory. Files in this directory can be accessed by workflow blocks such as *FileReader*. Workflow-specific attachments are stored in the `proof-environment/data/attachments/` directory.
+Place your files in the `proof-environment/data/userdata/` directory. Files in this directory can be accessed by workflow blocks such as *FileReader*.
+
+**Data Directory Structure:**
+- `userdata/` - User-managed files for workflow blocks
+- `attachments/` - Workflow attachments organized by attachment ID
+- `executions/` - Model file logs organized by execution ID (as specified in docker-compose)
 
 ### How can I export workflow executions?
 **Version 1.1.0 and later:**
