@@ -87,17 +87,7 @@ Furthermore, the recipient of this documentation is an ordinary user, who likes 
         - [Configure a *Program*](UI/configs.md#3-programs-configs)
         - [Configure an *Attachment*](UI/configs.md#4-attachments-configs)
 <br><br>
-- Frequently Asked Questions [(FAQ)](faq.md)      
-
-
-<!--
-- [PROOF Blocks](Block/proof-blocks.md)
-  - [Block Structure](Block/overview.md)
-  - [Block Components](Block/overview.md#block-components)
-  - [Use PROOF Blocks](Block/using-proof-blocks.md)
-  - [Create new Blocks](Block/creating-new-templates.md)
-- [PROOF Programs](Program/proof-programsmd)
-- [Test Blocks and its Program](#testing-blocks-and-program) -->
+- Frequently Asked Questions [(FAQ)](faq.md)
 
 ## Documentation for Developers  
 
