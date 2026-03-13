@@ -39,7 +39,9 @@ This feature is available in version 1.1.0 and later.
 Blocks can only connect if their inputs and outputs are compatible (same data type). Compatible connections are indicated by matching colors. Check that you're connecting compatible pin types.
 
 ### Where can I find logs?
-Logs are available in the *Monitoring* panel of the PROOF UI. Select a workflow execution to view its logs and status information.
+Logs are available in the *Monitoring* panel of the PROOF UI. Select a workflow execution or blocks to view its logs and status information.
+
+Model log files are stored in the file system at `proof-environment/data/executions/[execution-id]/` for offline analysis and troubleshooting.
 
 ## Getting Help
 

@@ -12,6 +12,7 @@ During execution, PROOF provides real-time progress tracking:
 - **Communication Point (CP) Tracking**: See the current communication point being processed
 - **Input Values Display**: View input values and workflow parameters for the execution
 - **Block Status**: Monitor the logs of individual blocks in real-time
+- **Log Storage**: Model logs are automatically saved in `proof-environment/data/executions/` organized by execution ID as specified in the docker-compose file
 
 ### 3. **Run Workflow**
 After a workflow is selected in the dropdown list, it can be executed by clicking on the "Run" button in the top right 

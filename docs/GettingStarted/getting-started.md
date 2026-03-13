@@ -59,7 +59,9 @@ Data exchange with PROOF works via the `proof-environment/data` folder structure
 
 - **`userdata/`**: Directory for user-managed files that can be accessed by workflow blocks (e.g., *FileReader* block)
 - **`attachments/`**: Directory for workflow-specific attachments and configuration files
+  - Uploaded attachment files are stored here, organized by their unique attachment ID.
 - **`executions/`**: Directory for execution-specific data and logs
+  - Model file logs are stored in subdirectories named by execution ID as specified in the docker-compose file.
 
 Files placed in the `userdata` folder can be referenced in your workflows for reading and writing operations.
 
