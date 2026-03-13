@@ -14,7 +14,7 @@ Here is as an example the JSON structure for the PROOF *Block* *FileWriter*:
   "id": "block_file_writer",
   "name": "File Writer",
   "description": "Write data to a file",
-  "containerImage": "ghcr.io/kit-iai-proof/proof-worker-python:1.0.0",
+  "containerImage": "ghcr.io/kit-iai-proof/proof-worker-python:1.1.0",
   "communicationParadigm": "STEPBASED",
   "programId": "prog_file_writer",
   "inputs": [
