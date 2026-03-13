@@ -29,7 +29,7 @@ Follow these steps to start and run PROOF.
 To install PROOF, move to the repository [proof-environment](https://github.com/KIT-IAI-PROOF/proof-environment) and clone the repository to your local file system. We recommend creating a PROOF directory for this purpose. To clone the repository using a cli, make sure you have **git** installed on your local machine. Alternatively, you can download the zip-file of proof-environment.
 
 ## Download the worker image (optional)
-Starting with version 1.1.0, PROOF automatically downloads missing Docker images when needed. However, you can optionally download the worker image in advance to speed up the first execution:
+Starting with version 1.1.0, PROOF automatically downloads missing Docker images when needed. However, you can optionally download the [proof-worker-python image](https://github.com/orgs/KIT-IAI-PROOF/packages/container/package/proof-worker-python) in advance to speed up the first execution:
 ```
 docker pull ghcr.io/kit-iai-proof/proof-worker-python:1.1.0
 ```
@@ -68,7 +68,7 @@ Files placed in the `userdata` folder can be referenced in your workflows for re
 ## Test your installation
 To test your installation, you can use the workflow *FileReader-to-FileWriter*. It contains two blocks: the *FileReader* which reads a file given as input parameter and provides the next line each step and the *FileWriter* which receives data and appends it to the file which name is given as an input parameter.
 
-When you see that the execution has the status SHUT_DOWN, you can check the contents of the output file (e.g. *out.txt*) which should be the same as the input file. This can be done via console:
+When you see that the execution has the status SHUT_DOWN, you can check the contents of the output file (e.g. *out.txt*) which should be the same as the input file for this demo workflow. This can be done via console:
 ```
 cd proof-environment/data/userdata
 cat out.txt
