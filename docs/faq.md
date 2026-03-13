@@ -35,6 +35,9 @@ When creating a Block Template, specify the container image in the `containerIma
 
 ## Troubleshooting
 
+### The command 'docker' could not be found in this WSL 2 distro.
+Start the Docker Desktop application.
+
 ### My workflow won't start. What should I check?
 1. Ensure all required inputs are configured
 2. Check that all blocks are properly connected
