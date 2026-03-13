@@ -38,6 +38,7 @@
 - **Logging Queue Updates**: Updated logging queue names for improved log management
 - **Fixed Orchestrator Logging Issues**: Resolved various logging-related bugs and inconsistencies
 - **Enhanced Error Handling**: Improved exception handling and error messages across components
+- **Updated Python Runtime Environment for Worker images**: Use venv now
 
 ---
 
