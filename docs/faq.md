@@ -26,6 +26,13 @@ The monitoring interface displays real-time execution progress, including:
 
 This feature is available in version 1.1.0 and later.
 
+### Which Docker images can be used in Block Templates?
+Block Templates typically use the PROOF worker images from the GitHub Container Registry:
+- **Python workers**: `ghcr.io/kit-iai-proof/proof-worker-python:1.1.0`
+- **Custom workers**: You can create custom Docker images based on the PROOF worker images
+
+When creating a Block Template, specify the container image in the `containerImage` field. PROOF will automatically download the image if it's not already available locally (v1.1.0+).
+
 ## Troubleshooting
 
 ### My workflow won't start. What should I check?
@@ -42,6 +49,37 @@ Blocks can only connect if their inputs and outputs are compatible (same data ty
 Logs are available in the *Monitoring* panel of the PROOF UI. Select a workflow execution or blocks to view its logs and status information.
 
 Model log files are stored in the file system at `proof-environment/data/executions/[execution-id]/` for offline analysis and troubleshooting.
+
+**Accessing logs via Docker (advanced):**
+You can also access container logs directly using Docker commands:
+```
+docker logs <container-name>
+```
+The container name is derived from the block title with spaces removed. 
+
+**Important naming restrictions:**
+- Block titles should not contain brackets `()` or other special characters (Docker container naming restriction)
+- Spaces in block titles are automatically removed when creating container names
+
+### I can't remove the "proof-files" volume. What should I do?
+If you receive an error when trying to remove the `proof-files` Docker volume, you need to remove all containers that are using this volume first.
+
+**Steps to resolve:**
+1. Stop all running PROOF containers:
+   ```
+   cd proof-environment/docker
+   docker compose down
+   ```
+2. Remove all stopped containers that use the volume:
+   ```
+   docker container prune
+   ```
+3. Now you can remove the volume:
+   ```
+   docker volume rm proof-files
+   ```
+
+Alternatively, use `docker compose down -v` to remove volumes along with containers.
 
 ## Getting Help
 
