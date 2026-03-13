@@ -20,9 +20,10 @@ A *Template* consists of three main parts:
 
 2. Optionally, additional files or dependencies required for the model's execution.
 
+<!--
 3. For Import/Export: A description file (in JSON format) that defines the *block's* metadata, inputs, outputs, and other configuration details. 
 json-structure-of-a-block.md
-
+-->
 
 # Steps to Create a New Template
 
@@ -33,12 +34,12 @@ json-structure-of-a-block.md
     Create the executable model file that contains the model's logic. This file should be able to run independently and perform the required computations. For this, you can use any programming language supported by PROOF (e.g., Python, Java, MATLAB).
 
     This file will be the core of your *Block Template*. It can be built and should be able to be tested outside of PROOF to ensure it works as expected.
-The model file must be a subclass of *proofcore.base.basewrapper.py* and implement the required methods for initialization, execution (*step*), and termination.
+    - **PYTHON**: The model file must be a subclass of *proofcore.base.basewrapper.py* and implement the required methods for initialization, execution (*step*), and termination.
 
 2. **Identify Attachments**
 
     *Attachments* are additional files or dependencies required for the model's execution. They are attached to the *Program* entity and can include configuration files, libraries, or other resources needed by the model.
-One *Attachment* must be the model file created in step 1. This *Attachment* is called the **entry point** of the *Program* entity. Additional *Attachments* can be added as needed. 
+    One *Attachment* must be the model file created in step 1. This *Attachment* is called the **entry point** of the *Program* entity. Additional *Attachments* can be added as needed. 
 
 <!--
 3. **Define the Template Metadata**
