@@ -86,6 +86,9 @@ Furthermore, the recipient of this documentation is an ordinary user, who likes 
         - [Configure a *Block Template*](UI/configs.md#2-templates-configs)
         - [Configure a *Program*](UI/configs.md#3-programs-configs)
         - [Configure an *Attachment*](UI/configs.md#4-attachments-configs)
+
+- PROOF Images
+    - [Creating custom python images](CustomImages/custom-images.md)
 <br><br>
 - Frequently Asked Questions [(FAQ)](faq.md)
 
