@@ -42,6 +42,7 @@ When setting the block name/title, you must follow Docker container naming conve
 - The block title is used to create the Docker container name for that block
 
 **Examples:**
+
 - ✅ Good: `FileReader1`, `My_Block`, `Data-Processor`
 - ❌ Bad: `Reader(1)`, `My Block!`, `Data@Processor`
 
