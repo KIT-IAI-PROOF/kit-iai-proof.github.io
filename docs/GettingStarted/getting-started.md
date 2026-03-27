@@ -12,7 +12,7 @@ To install docker and to see more information about docker, please follow the in
 <br>
 All other required components are provided via Docker images.
 
-**Exception:** If you want to create your own *Blocks*, you need to have Python, Java, or MATLAB installed on your host system to create and test the model programs.
+**Exception:** If you want to create your own *Templates*, you need to have Python, Java, or MATLAB installed on your host system to create and test the model programs.
 
 <!--
 ### Local Execution
@@ -31,20 +31,19 @@ To install PROOF, move to the repository [proof-environment](https://github.com/
 ## Download the worker image (optional)
 Starting with version 1.1.0, PROOF automatically downloads missing Docker images when needed. However, you can optionally download the [proof-worker-python image](https://github.com/orgs/KIT-IAI-PROOF/packages/container/package/proof-worker-python) in advance to speed up the first execution:
 ```
-docker pull ghcr.io/kit-iai-proof/proof-worker-python:1.1.0
+docker pull ghcr.io/kit-iai-proof/proof-worker-python:1.2.0
 ```
 
 ## Start PROOF
-To start PROOF, navigate to the following folder within proof-environment:
-```
-cd proof-environment/docker
-```
-Afterwards, start PROOF using the startPROOF script in the docker folder:
+To start PROOF, navigate to proof-environment and start PROOF using the provided startPROOF scripts:  
+**Linux / Mac:**
 ```
 ./startPROOF
 ```
-**Windows:** Ensure to have the **Docker Desktop App** running. Start PROOF using the startPROOF.bat file.
+**Windows:**  
 
+- Ensure to have the **Docker Desktop App** running.  
+- Start PROOF using the startPROOF.bat file.
 
 PROOF will take a few moments to be started properly. Thus, you can access the PROOF graphical user interface by opening a new browser window/tab and type the following in the URL address bar:
 ```
@@ -52,23 +51,28 @@ localhost
 ```
 Due to caching behaviour in some browsers, we **strongly recommend** opening the PROOF UI in a **private browser window** at this moment.
 
-To access the workflow creation editor, the credentials to be used are *test/test*.
+To access the workflow creation editor, the **credentials** to be used are *proof/proof*.
 
 ## Data exchange
 Data exchange with PROOF works via the `proof-environment/data` folder structure:
 
 - **`userdata/`**: Directory for user-managed files that can be accessed by workflow blocks (e.g., *FileReader* block)
 - **`attachments/`**: Directory for workflow-specific attachments and configuration files
-  - Uploaded attachment files are stored here, organized by their unique attachment ID.
+    - Uploaded attachment files are stored here, organized by their unique attachment ID.
 - **`executions/`**: Directory for execution-specific data and logs
-  - Model file logs are stored in subdirectories named by execution ID as specified in the docker-compose file.
+    - Model file logs are stored in subdirectories named by execution ID as specified in the docker-compose file.
 
 Files placed in the `userdata` folder can be referenced in your workflows for reading and writing operations.
 
 ## Test your installation
-To test your installation, you can use the workflow *FileReader-to-FileWriter*. It contains two blocks: the *FileReader* which reads a file given as input parameter and provides the next line each step and the *FileWriter* which receives data and appends it to the file which name is given as an input parameter.
+To test your installation, you can use the workflow *FileReader-to-FileWriter*. It contains two blocks:
+- the *FileReader* which reads a file given as input parameter and provides the next line each step
+- the *FileWriter* which receives data and appends it to the file which name is given as an input parameter.
 
-When you see that the execution has the status SHUT_DOWN, you can check the contents of the output file (e.g. *out.txt*) which should be the same as the input file for this demo workflow. This can be done via console:
+To start the workflow you can use the `input.txt` as input file for the *FileReader*. It is already available in the `userdata` folder.  
+As output file for the *FileWriter* simply use a custom file name e.g. *out.txt*. The output file will be stored in the `userdata` directory.
+
+When you see that the execution has the status SHUT_DOWN, you can check the contents of the output file (e.g. *out.txt*) which should be the same as the input file for this demo workflow. This can e.g. be done via console:
 ```
 cd proof-environment/data/userdata
 cat out.txt
