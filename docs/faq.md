@@ -28,7 +28,7 @@ This feature is available in version 1.1.0 and later.
 
 ### Which Docker images can be used in Block Templates?
 Block Templates typically use the PROOF worker images from the GitHub Container Registry:
-- **Python workers**: `ghcr.io/kit-iai-proof/proof-worker-python:1.1.0`
+- **Python workers**: `ghcr.io/kit-iai-proof/proof-worker-python:1.2.0`
 - **Custom workers**: You can create custom Docker images based on the PROOF worker images
 
 When creating a Block Template, specify the container image in the `containerImage` field. PROOF will automatically download the image if it's not already available locally (v1.1.0+).
@@ -37,6 +37,12 @@ When creating a Block Template, specify the container image in the `containerIma
 
 ### The command 'docker' could not be found in this WSL 2 distro.
 Start the Docker Desktop application.
+
+### It looks like you have tried to invoke the docker CLI from the docker-desktop WSL2 distribution. This is not supported.
+Ensure to use the Ubuntu distro in WSL and not your Docker-Desktop distro.
+
+### Unable to get image 'ghcr.io/kit-iai-proof/<a-proof-image>': permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock
+Enable the setting "Enable Integration with my default WSL distro" in Docker Desktop, see https://stackoverflow.com/questions/63497928/ubuntu-wsl-with-docker-could-not-be-found 
 
 ### My workflow won't start. What should I check?
 1. Ensure all required inputs are configured
