@@ -53,6 +53,18 @@ Due to caching behaviour in some browsers, we **strongly recommend** opening the
 
 To access the workflow creation editor, the **credentials** to be used are *proof/proof*.
 
+## Stop PROOF
+Don't forget to stop PROOF before shutting down. To ensure network instabilities do not prevent PROOF from running, PROOF comes with a restart policy for the docker containers if not stopped.  
+Therefore simply use the stopPROOF scripts:  
+**Linux / Mac:**
+```
+./stopPROOF
+```
+**Windows:**  
+ 
+- Stop PROOF using the stopPROOF.bat file.
+
+
 ## Data exchange
 Data exchange with PROOF works via the `proof-environment/data` folder structure:
 
