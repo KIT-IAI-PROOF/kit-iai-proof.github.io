@@ -6,7 +6,7 @@ The Workflow Monitoring is the main interface to run, execute, and stop workflow
 This interface allows you to monitor the status of workflows, including their execution status, logs, and other relevant information.
 ![Monitoring](../Images/workflow/2025-07-16_Monitoring.png)
 
-### 2. **Execution Progress Tracking** *(Available in v1.1.0+)*
+### 2. **Execution Progress Tracking**
 During execution, PROOF provides real-time progress tracking:
 - **Progress Visualization**: Visual progress bars showing the current state of execution
 - **Communication Point (CP) Tracking**: See the current communication point being processed
@@ -19,5 +19,5 @@ After a workflow is selected in the dropdown list, it can be executed by clickin
 corner of the Execution Monitoring interface.
 ![Run](../Images/workflow/2025-07-16_Monitoring_Run.png)
 
-### 4. **Export Executions** *(Available in v1.1.0+)*
+### 4. **Export Executions**
 - **Export Execution**: Export a complete workflow execution as a ZIP file, including all configurations, templates and attachments. This feature is available to all users.

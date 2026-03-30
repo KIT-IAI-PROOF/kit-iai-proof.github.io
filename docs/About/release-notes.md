@@ -1,5 +1,58 @@
 # Release Notes
 
+## Version 1.2.0
+
+### New Features
+
+#### Workflow Configuration
+- **MQTT Integration**: 
+  - New MQTT Subscriber and Publisher attachments for IoT and real-time data streaming integration
+- **EBM (Energy Building Model) Workflow Support**: 
+  - New workflow templates for energy building model simulations and research workflows
+- **Workflow Naming Convention**: Demo workflows now clearly marked with `demo_` prefix
+
+#### Block Customization & Configuration
+- **Block Parameter Overrides**: Blocks can now override template defaults with fine-grained control
+  - Customize container image per block
+  - Configure sync strategy at block level
+  - Mark shutdown-relevant parameters
+  - Track which values differ from template defaults
+- **Improved Block Visualization**: Enhanced visual representation of block properties in the editor
+  - Better parameter visibility
+
+#### User Interface & Monitoring Enhancements
+- **Comprehensive Monitoring View**:
+  - Full execution parameters and settings visualization
+  - Enhanced ExecutionSettingsPanel with workflow start and run parameters
+  - Better visibility into execution configuration and state
+  - Improved parameter display for debugging and analysis
+- **Consistent Data Organization**:
+  - Alphabetical sorting of inputs in template editor and configuration
+  - Alphabetical sorting of blocks in configuration views
+  - Alphabetical sorting of templates in usage lists
+  - Improved discoverability and consistency across UI
+- **Template Management Dialog**: Simplified and enhanced templates display with better UX
+- **Enhanced Localization**: Complete multi-language support (English/German) for all new features
+- **Template Usage Tracking**: 
+  - View all workflows and blocks that depend on a specific template
+  - Prevents accidental deletion of in-use templates with dependency visualization
+  - Enhanced template management with usage information in the UI
+
+### Bug Fixes & Improvements
+
+- Adjusted block logging queue names for consistency
+- Added robust error handling for block status updates in orchestrator
+  - Prevents orchestrator crashes from individual block errors
+- Fixed block container map that was preventing memory cleanup across multiple workflow runs
+
+### Performance & Infrastructure
+
+- **Improved Bundle Size Management**: UI redesigned with better code organization
+- **Enhanced State Management**: Better provider and state handling for new features
+- **MQTT Library Support**: paho-mqtt integration for IoT communication patterns
+
+---
+
 ## Version 1.1.0
 
 ### New Features

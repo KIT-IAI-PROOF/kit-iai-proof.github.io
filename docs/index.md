@@ -41,7 +41,6 @@ which are reusable units within the PROOF environment.
 The first published version of PROOF focuses on Docker-based simulations, while local execution and Kubernetes-based deployments will be available in the near future (2026).
 Furthermore, the recipient of this documentation is an ordinary user, who likes to run simulations in an easy way.
 -->
-
 <br>
 
 ### Table of Contents
@@ -77,7 +76,7 @@ Furthermore, the recipient of this documentation is an ordinary user, who likes 
     - [Create Model Programs](Block/creating-model-programs)
     - [Test Blocks and its Program](#testing-blocks-and-program)
 -->
-- PROOF UI  
+- PROOF UI
     - [Create a new *Workflow*](UI/creating-workflows.md)
     - [Start a *Workflow*](Workflow/monitoring-workflows.md#2-run-workflow)
     - [Monitor a running *Workflow*](Workflow/monitoring-workflows.md)
@@ -86,7 +85,7 @@ Furthermore, the recipient of this documentation is an ordinary user, who likes 
         - [Configure a *Block Template*](UI/configs.md#2-templates-configs)
         - [Configure a *Program*](UI/configs.md#3-programs-configs)
         - [Configure an *Attachment*](UI/configs.md#4-attachments-configs)
-
+<!-- -->
 - PROOF Images
     - [Creating custom python images](CustomImages/custom-images.md)
 <br><br>

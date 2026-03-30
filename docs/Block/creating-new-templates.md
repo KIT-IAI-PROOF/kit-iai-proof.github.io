@@ -29,7 +29,7 @@ json-structure-of-a-block.md
 
 1. **Develop the Program**:
 
-    <span style="color:red">**Note:** in PROOF version 1.1, only Python is supported. Therefore, the model file must be a Python script and the documentation hereafter refers to Python specifically.</span>
+    <span style="color:red">**Note:** in the current PROOF version, only Python is supported. Therefore, the model file must be a Python script and the documentation hereafter refers to Python specifically.</span>
 
     Create the executable model file that contains the model's logic. This file should be able to run independently and perform the required computations. For this, you can use any programming language supported by PROOF (e.g., Python, Java, MATLAB).
 
