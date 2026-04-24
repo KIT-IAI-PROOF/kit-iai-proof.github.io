@@ -21,6 +21,11 @@ It provides a visual representation of the Workflow structure, allowing users to
    - When trying to connect Blocks, only compatible input and output pins are connectable. Compatible pins have the same color and data type.
     ![Connect Blocks](../Images/workflow/2025-07-04_ConnectBlocks.png)
 
+### Loop Connections
+   - Blocks that possess inputs and outputs can also connect their own output(s) to their own input(s), depending on the type of the input(s)/output(s)
+   - This means an effective feedback loop where a value based on a block is used as its input for the next simulation step
+   - Most likely, in such a case there are other (static) inputs that influence the output calculation in a certain way
+
 ## Configure Workflow Settings
    - You can configure the settings of the Workflow by clicking on the "Settings" button in the top right corner of the Workflow Editor.
    - This allows you to set ID, label, description, paradigm, and asynchronous Action for the entire Workflow.

@@ -64,6 +64,17 @@ Therefore simply use the stopPROOF scripts:
  
 - Stop PROOF using the stopPROOF.bat file.
 
+## Standard Ports
+PROOF is using certain port numbers per default and therefore expects them not to be allocated at the time of the start. These ports are:
+- proof-keycloak: 8080
+- proof-postgres: 5432
+- proof-redis: 6379
+- proof-config-manager: 8100
+- proof-orchestrator: 8200
+- proof-frontend: 80
+- proof-rabbitmq: 5672, 15672, 15674, 61613
+
+In case these port need to be changed (e.g. one of them is already in use), they can be adjusted in the docker-compose.prod.yaml file under proof-environment/docker. 
 
 ## Data exchange
 Data exchange with PROOF works via the `proof-environment/data` folder structure:

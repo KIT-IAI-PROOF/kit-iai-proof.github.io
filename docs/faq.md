@@ -25,6 +25,9 @@ The monitoring interface displays real-time execution progress, including:
 - Input values and workflow parameters
 - Status of individual blocks
 
+### Does PROOF support feedback loops in simulations?
+Yes, PROOF generally supports feedback loops in simulations. While the technical prerequisites are provided, the decision whether a feedback loop is plausible in a certain context is the responsibility of the workflow designer.
+
 ### Which Docker images can be used in Block Templates?
 Block Templates typically use the PROOF worker images from the GitHub Container Registry:
 
