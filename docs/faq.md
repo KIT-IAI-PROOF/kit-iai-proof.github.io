@@ -38,26 +38,26 @@ When creating a Block Template, specify the container image in the `containerIma
 
 ## Troubleshooting
 
-#### The command 'docker' could not be found in this WSL 2 distro.
+### The command 'docker' could not be found in this WSL 2 distro.
 Start the Docker Desktop application.
 
-#### It looks like you have tried to invoke the docker CLI from the docker-desktop WSL2 distribution. This is not supported.
+### It looks like you have tried to invoke the docker CLI from the docker-desktop WSL2 distribution. This is not supported.
 Ensure to use the Ubuntu distro in WSL and not your Docker-Desktop distro.
 
-#### Unable to get image 'ghcr.io/kit-iai-proof/<a-proof-image>': permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock
+### Unable to get image 'ghcr.io/kit-iai-proof/<a-proof-image>': permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock
 Enable the setting "Enable Integration with my default WSL distro" in Docker Desktop, for details see [here](https://stackoverflow.com/questions/63497928/ubuntu-wsl-with-docker-could-not-be-found)
 
-#### My workflow won't start. What should I check?
+### My workflow won't start. What should I check?
 1. Ensure all required inputs are configured
 2. Check that all blocks are properly connected
 3. Verify that the workflow is saved
 4. Check the monitoring panel for error messages
 5. Review logs for detailed error information
 
-#### Blocks are not connecting. Why?
+### Blocks are not connecting. Why?
 Blocks can only connect if their inputs and outputs are compatible (same data type). Compatible connections are indicated by matching colors. Check that you're connecting compatible pin types.
 
-#### Where can I find logs?
+### Where can I find logs?
 Logs are available in the *Monitoring* panel of the PROOF UI. Select a workflow execution or blocks to view its logs and status information.
 
 Model log files are stored in the file system at `proof-environment/data/executions/[execution-id]/` for offline analysis and troubleshooting.
@@ -71,7 +71,7 @@ The container name is derived from the block title with spaces removed.
 
 **Note:** Block titles must follow Docker naming conventions (no brackets or special characters). See [Creating Workflows - Block Naming Restrictions](UI/creating-workflows.md#important-block-naming-restrictions) for details.
 
-#### I can't remove the "proof-files" volume. What should I do?
+### I can't remove the "proof-files" volume. What should I do?
 If you receive an error when trying to remove the `proof-files` Docker volume, you need to remove all containers that are using this volume first.
 
 **Steps to resolve:**
