@@ -71,6 +71,10 @@ The container name is derived from the block title with spaces removed.
 
 **Note:** Block titles must follow Docker naming conventions (no brackets or special characters). See [Creating Workflows - Block Naming Restrictions](UI/creating-workflows.md#important-block-naming-restrictions) for details.
 
+### I receive the following message: "Volume "proof-files" exists but doesn't match configuration in compose file. Recreate (data will be lost)? (y/N)". What should I do?
+By choosing *yes (y)*, docker will try to delete the `proof-files` Docker volume (with all data inside getting deleted too) and recreating a new one. If this fails, see [I can't remove the "proof-files" volume](#i-cant-remove-the-proof-files-volume-what-should-i-do).  
+By choosing *No (N)* (default option), docker will attempt to use the existing Docker volume and ignores a potentially new configuration.
+
 ### I can't remove the "proof-files" volume. What should I do?
 If you receive an error when trying to remove the `proof-files` Docker volume, you need to remove all containers that are using this volume first.
 
