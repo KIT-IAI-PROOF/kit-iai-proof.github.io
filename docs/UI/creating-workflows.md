@@ -22,9 +22,10 @@ It provides a visual representation of the Workflow structure, allowing users to
     ![Connect Blocks](../Images/workflow/2025-07-04_ConnectBlocks.png)
 
 ### Loop Connections
-   - Blocks that possess inputs and outputs can also connect their own output(s) to their own input(s), depending on the type of the input(s)/output(s)
-   - This means an effective feedback loop where a value based on a block is used as its input for the next simulation step
-   - Most likely, in such a case there are other (static) inputs that influence the output calculation in a certain way
+   - A loop in a workflow is a scenario where the output of a block A is used as input for another block B which then again connects to block A
+   - In general, a loop can contain an arbitrary number n (greater than zero) of blocks as long as the the output of a block A after being processed by n blocks is used as an input of block A again 
+   - Loops can be implemented by using a static input as initial value for the actual input
+   - Both inputs use the same modelVarName
 
 ## Configure Workflow Settings
    - You can configure the settings of the Workflow by clicking on the "Settings" button in the top right corner of the Workflow Editor.

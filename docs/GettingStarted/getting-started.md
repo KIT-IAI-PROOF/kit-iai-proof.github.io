@@ -74,7 +74,8 @@ PROOF is using certain port numbers per default and therefore expects them not t
 - proof-frontend: 80
 - proof-rabbitmq: 5672, 15672, 15674, 61613
 
-In case these port need to be changed (e.g. one of them is already in use), they can be adjusted in the docker-compose.prod.yaml file under proof-environment/docker. 
+In case these port need to be changed (e.g. one of them is already in use), they can be adjusted in the docker-compose.prod.yaml file under proof-environment/docker. \
+In case it is unclear why rabbitmq requires multiple ports, see the rabbitmq documentation [here](https://www.rabbitmq.com/docs/networking). 
 
 ## Data exchange
 Data exchange with PROOF works via the `proof-environment/data` folder structure:
