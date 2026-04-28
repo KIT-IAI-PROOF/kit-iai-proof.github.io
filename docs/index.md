@@ -65,7 +65,7 @@ Furthermore, the recipient of this documentation is an ordinary user, who likes 
 - PROOF *Blocks* and *Templates*
     - [Introduction](Block/overview.md)
     - [Using Blocks](UI/using-proof-blocks.md)
-    - [Creating new Blocks](Block/creating-new-templates.md)
+    - [Creating new Templates](Block/creating-new-templates.md)
 <!--
 - PROOF *Workflows*
     - [Workflow Structure](Workflow/proof-workflows.md#workflow-structure)
