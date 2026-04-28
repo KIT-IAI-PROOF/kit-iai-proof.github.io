@@ -32,7 +32,7 @@ nav:
   - Blocks:
     - Introduction: Block/overview.md
     - Using Blocks: UI/using-proof-blocks.md
-    - Creating new Blocks: Block/creating-new-templates.md
+    - Creating new Templates: Block/creating-new-templates.md
     #- Changing Blocks: Block/using-proof-blocks.md
   #- Program: Program/proof-programs.md
     #- Overview: Program/proof-programs.md 

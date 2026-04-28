@@ -21,6 +21,12 @@ It provides a visual representation of the Workflow structure, allowing users to
    - When trying to connect Blocks, only compatible input and output pins are connectable. Compatible pins have the same color and data type.
     ![Connect Blocks](../Images/workflow/2025-07-04_ConnectBlocks.png)
 
+### Loop Connections
+   - A loop in a workflow is a scenario where the output of a block A is used as input for another block B which then again connects to block A.
+   - In general, a loop can span over an arbitrary number of blocks as long as the output of a block A, processed by n blocks, is used as an input of block A again.
+   - Loops can be implemented by using a static input (INIT phase) as initial value for the non-static input in EXECUTION phase.
+     - Both inputs need to use the same *modelVarName*.
+
 ## Configure Workflow Settings
    - You can configure the settings of the Workflow by clicking on the "Settings" button in the top right corner of the Workflow Editor.
    - This allows you to set ID, label, description, paradigm, and asynchronous Action for the entire Workflow.

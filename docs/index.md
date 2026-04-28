@@ -1,12 +1,16 @@
-# PROOF Documentation
+# PROOF – PROcess Orchestration Framework
 
+<!--
 > **⚠️ Work in Progress**  
 > This documentation is currently under active development. Some sections may be incomplete or subject to change. 
 > We are continuously working on improving and expanding the content. If you encounter any issues or have suggestions, 
 > please feel free to reach out to the development team.
+-->
 
+<!--
 ## Introduction
-PROOF is a co-simulation framework that allows users to create and manage complex workflows. 
+-->
+PROOF is a co-simulation framework that allows users to create and orchestrate complex workflows. 
 
 The PROOF UI provides a user-friendly interface for creating and managing workflows.
 
@@ -43,7 +47,7 @@ Furthermore, the recipient of this documentation is an ordinary user, who likes 
 -->
 <br>
 
-### Table of Contents
+## Table of Contents
 <!--
 - [Introduction](#introduction)
   - [Basic Execution Options](#basic-execution-options)
@@ -61,7 +65,7 @@ Furthermore, the recipient of this documentation is an ordinary user, who likes 
 - PROOF *Blocks* and *Templates*
     - [Introduction](Block/overview.md)
     - [Using Blocks](UI/using-proof-blocks.md)
-    - [Creating new Blocks](Block/creating-new-templates.md)
+    - [Creating new Templates](Block/creating-new-templates.md)
 <!--
 - PROOF *Workflows*
     - [Workflow Structure](Workflow/proof-workflows.md#workflow-structure)
