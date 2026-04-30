@@ -19,7 +19,7 @@ It provides a visual representation of the Workflow structure, allowing users to
    - You can connect Blocks by clicking on the output of one Block and dragging it to the input of another Block.
    - This establishes a data flow between the Blocks, allowing them to communicate and share data.
    - When trying to connect Blocks, only compatible input and output pins are connectable. Compatible pins have the same color and data type.
-    ![Connect Blocks](../Images/workflow/2025-07-04_ConnectBlocks.png)
+    ![Connect Blocks](../Images/workflow/2026-04-30_editor_connect_blocks.png)
 
 ### Loop Connections
    - A loop in a workflow is a scenario where the output of a block A is used as input for another block B which then again connects to block A.
@@ -31,13 +31,16 @@ It provides a visual representation of the Workflow structure, allowing users to
    - You can configure the settings of the Workflow by clicking on the "Settings" button in the top right corner of the Workflow Editor.
    - This allows you to set ID, label, description, paradigm, and asynchronous Action for the entire Workflow.
    - By clicking on the "save" button, the Workflow settings are saved.
-     ![Configure Workflow Settings](../Images/workflow/2025-07-04_ConfigureWorkflow.png)
+     ![Configure Workflow Settings](../Images/workflow/2026-04-30_workflow_settings_1.png)
+     ![Configure Workflow Settings](../Images/workflow/2026-04-30_workflow_settings_2.png)
 
 ## Configure *Block* Settings
-   - You can configure the Name of each Block by clicking on it and accessing the Block configuration panel.
+   - You can configure the Name of each Block by right-clicking on it, selecting "Settings" and accessing the Block configuration panel.
    - It is not possible to change the basic functionality of a Block, as it is defined by the Block Template. 
      It is possible to change nearly all Template attributes as well as the associated Program and Attachments using the Template Configuration panel.
-     ![Configure Block Settings](../Images/workflow/2025-07-04_ConfigureBlocks.png)
+     ![Configure Block Settings](../Images/workflow/2026-04-30_block_settings_1.png)
+     ![Configure Block Settings](../Images/workflow/2026-04-30_block_settings_2.png)
+     ![Configure Block Settings](../Images/workflow/2026-04-30_block_settings_3.png)
 
 ### Important: Block Naming Restrictions
 When setting the block name/title, you must follow Docker container naming conventions:
@@ -57,7 +60,7 @@ Violating these restrictions will cause errors when executing the workflow, as D
 ## Save the *Workflow*
    - Once you have built your Workflow, you must save it by clicking on the "Save" button in the top right corner of the Workflow Editor.
    - This saves the Workflow to the PROOF database, making it available for execution and further editing.
-     ![Save Workflow](../Images/workflow/2025-07-04_SaveWorkflow.png)
+     ![Save Workflow](../Images/workflow/2026-04-30_editor_connect_blocks_save.png)
 
 ## Executing the Workflow via Workflow Editor
    - After having saved the Workflow, you can execute it by navigating to the *RUN* button in the top right corner of the Workflow editor.
