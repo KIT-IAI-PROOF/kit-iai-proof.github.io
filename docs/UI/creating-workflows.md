@@ -6,8 +6,9 @@ It provides a visual representation of the Workflow structure, allowing users to
 <br>
 
 ## Add a new Workflow
-   - You can create a new Workflow by clicking on the "*+*" button in the Workflow Editor to the right of the Workflow combo box .
-   - This opens a new empty Workflow canvas where you can start building your Workflow.
+   - You can create a new Workflow by clicking on the "*+*" button in the Workflow Editor to the right of the Workflow combo box.
+   - This opens the [Workflow Settings window](#configure-workflow-settings) of the created Workflow. Customize the label, description and parametrization of the Workflow here.
+   - Closing the settings window leads to the empty Workflow canvas where you can start building your Workflow.
    
 ## Add PROOF *Blocks* to the *Workflow* from *Block Templates*
    - You can drag and drop *Block Templates* from the right sidebar onto the Workflow canvas.
@@ -27,7 +28,7 @@ It provides a visual representation of the Workflow structure, allowing users to
    - Loops can be implemented by using a static input (INIT phase) as initial value for the non-static input in EXECUTION phase.
      - Both inputs need to use the same *modelVarName*.
 
-## Configure Workflow Settings
+## Configure *Workflow* Settings
    - You can configure the settings of the Workflow by clicking on the "Settings" button in the top right corner of the Workflow Editor.
    - This allows you to set ID, label, description, paradigm, and asynchronous Action for the entire Workflow.
    - By clicking on the "save" button, the Workflow settings are saved.
@@ -37,10 +38,12 @@ It provides a visual representation of the Workflow structure, allowing users to
 ## Configure *Block* Settings
    - You can configure the Name of each Block by right-clicking on it, selecting "Settings" and accessing the Block configuration panel.
    - It is not possible to change the basic functionality of a Block, as it is defined by the Block Template. 
-     It is possible to change nearly all Template attributes as well as the associated Program and Attachments using the Template Configuration panel.
-     ![Configure Block Settings](../Images/workflow/2026-04-30_block_settings_1.png)
-     ![Configure Block Settings](../Images/workflow/2026-04-30_block_settings_2.png)
-     ![Configure Block Settings](../Images/workflow/2026-04-30_block_settings_3.png)
+     - Some parameters which are inherited from the Block Template can be changed (e.g. the container *Image*). If they differ from the Block Template they are being marked visually.
+     - It is possible to change all Template attributes as well as the associated Program and Attachments using the Template Configuration panel.
+
+   ![Configure Block Settings](../Images/workflow/2026-04-30_block_settings_1.png)
+   ![Configure Block Settings](../Images/workflow/2026-04-30_block_settings_2.png)
+   ![Configure Block Settings](../Images/workflow/2026-04-30_block_settings_3.png)
 
 ### Important: Block Naming Restrictions
 When setting the block name/title, you must follow Docker container naming conventions:
@@ -63,13 +66,13 @@ Violating these restrictions will cause errors when executing the workflow, as D
      ![Save Workflow](../Images/workflow/2026-04-30_editor_connect_blocks_save.png)
 
 ## Executing the Workflow via Workflow Editor
-   - After having saved the Workflow, you can execute it by navigating to the *RUN* button in the top right corner of the Workflow editor.
+   - After having saved the Workflow, you can execute it by navigating to the *START WORKFLOW* button in the top right corner of the Workflow editor.
    - You must enter all relevant Execution values in the pop-up execution dialog, such as Execution ID, Description, and other parameters specific to the Workflow.
 
 ## Executing the Workflow via Monitoring Panel
    - You can also start a saved Workflow from the *Workflow Monitoring* panel in the PROOF UI.
    - Click the *Workflow Monitoring* menu item in the left menu bar to open the monitoring interface.
-   - Press the "RUN Workflow" button in the top right corner of the Workflow Monitoring interface. A Combo box appears listing all saved Workflows.
+   - Press the *RUN* button in the top right corner of the Workflow Monitoring interface. A Combo box appears listing all saved Workflows.
    - Select the saved Workflow from the list and click on the "Start" button to initiate the execution.
    - Enter all necessary attribute values in the pop-up execution dialog, such as Execution Label, Description, and all start values for the given Inputs.
    - Monitor the execution progress and view results through the Workflow Monitoring interface.
