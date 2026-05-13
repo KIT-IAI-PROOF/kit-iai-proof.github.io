@@ -15,18 +15,18 @@ FROM ghcr.io/kit-iai-proof/proof-worker-python:1.2.0
 # requirements.txt must be located in the same directory as this Dockerfile!
 COPY requirements.txt requirements.txt
 # Install all python packages listed under requirements.txt into the predefined python venv
-RUN pip install --no-cache-dir requirements.txt && rm -rf /var/lib/apt/lists/* requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt && rm -rf /var/lib/apt/lists/* requirements.txt
 ```
 4. Build the docker image by giving it a name and a tag. The name should give you a hint on the purpose or functionality of your image, while the tag should give you information about the image's current version and/or state. Name and tag are seperated by a colon (:). Use the following command:
 ```
-docker build -t <your-image-name:your-image-tag>
+docker build -t <your-image-name:your-image-tag> .
 ```
 
   The command has to be executed from within the directory where your *Dockerfile* and *requirements.txt* are located.
   If your are managing multiple Dockerfiles in the same directory or if you are using a Dockerfile with a name different from *Dockerfile*, use the following command:
 
 ```
-docker build -f <your-dockerfile> -t <your-image-name:your-image-tag>
+docker build -f <your-dockerfile> -t <your-image-name:your-image-tag> .
 ```
 5. Afterwards, you may want to test whether your build and the installation of the libraries were successful. You can do so by starting a container of your image which only gives you feedback about the status of the libraries you wanted to install. For this example, we assume to test the libraries that were stated previously as content of our *requirements.txt*. Use the following command:  
     ```
