@@ -1,5 +1,60 @@
 # Release Notes
 
+## Version 1.3.0
+
+### New Features
+
+#### Monitoring & Execution Tracking
+- **Block Status Monitoring Service Integration**: New monitoring service integration for real-time block status updates
+  - Visualize individual block execution states and communication points
+- **Enhanced Execution Parameters Visualization**: 
+  - Full visibility of workflow start and run parameters in monitoring view
+  - Detailed execution settings display with better layout and readability
+
+#### Standard Templates and Workflows
+- **PROOF-Importer Integration**: Replaced data.sql with proof-importer for database initialization
+  - More robust and maintainable approach for initial data population
+- **Standard Templates**: Added more standard templates and updated default values
+
+#### User Interface Improvements
+- **Template Usage Visualization**: View all workflows and blocks that depend on a specific template
+  - Prevents accidental deletion of in-use templates
+- **Alphabetical Sorting**: Consistent sorting across all tables and lists
+  - Inputs displayed alphabetically in template editor and block configuration
+  - Executions sorted by startedAt timestamp
+
+#### Backend Improvements
+- **Loop Handling Improvements**: Added `startValue` field for block inputs to support iterative/loop scenarios
+  - Enables proper initialization of inputs that participate in feedback loops
+  - Distinguishes between static initial parameters and runtime execution values
+- **Java Wrapper Implementation**: New Java wrapper for Java-based model program execution
+  - Fixed command parsing to avoid jar startup issues
+- **Input/Output Type Improvements**:
+  - New array data types: STRING_ARRAY, INTEGER_ARRAY, FLOAT_ARRAY, OBJECT_ARRAY
+  - FILE_NAME type support for file parameter handling
+- **Synchronization Strategy Extension**: Add new strategy *ALL_VALUES*
+  - *ALL_VALUES* triggers model execution when all required values are available
+
+### Bug Fixes & Improvements
+
+#### Stability & Reliability
+- **Block Container Memory Management**: Fixed block container map clearing before re-population
+  - Prevents memory leaks from accumulated block references
+  - Ensures proper cleanup between workflow executions
+- **Synchronized Input Access**: Thread-safe access to currentInputs map in worker
+  - Prevents race conditions in concurrent input handling
+  - Improves stability under load
+- **Error Step Handling**: Corrected ERROR_STEP emission logic
+  - Only sends ERROR_STEP on actual timeout when waiting for inputs
+  - Reduces false positive error states
+
+#### Configuration & Consistency
+- **Export Functionality**: Fixed missing files folder in execution export
+  - Complete ZIP exports now include all necessary file references
+  - Improved export reliability for sharing executions
+
+---
+
 ## Version 1.2.0
 
 ### New Features
