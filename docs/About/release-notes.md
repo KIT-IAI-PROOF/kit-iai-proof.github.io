@@ -24,9 +24,12 @@
   - Executions sorted by startedAt timestamp
 
 #### Backend Improvements
-- **Loop Handling Improvements**: Added `startValue` field for block inputs to support iterative/loop scenarios
+- **Loop Handling Improvements**: Added `startValue` field for inputs to support iterative/loop scenarios
   - Enables proper initialization of inputs that participate in feedback loops
   - Distinguishes between static initial parameters and runtime execution values
+- **Default field**:  Added `defaultValue` field for static and non-static inputs 
+  - Used when no input value arrives in the expected time period
+  - Mandatory for optional static inputs  
 - **Java Wrapper Implementation**: New Java wrapper for Java-based model program execution
   - Fixed command parsing to avoid jar startup issues
 - **Input/Output Type Improvements**:
