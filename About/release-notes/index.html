@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Release Notes - PROOF Documentation</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../css/brands.min.css" rel="stylesheet">
+        <link href="../../css/solid.min.css" rel="stylesheet">
+        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">PROOF Documentation</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../../GettingStarted/getting-started/" class="nav-link">Getting Started</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Workflows</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../Workflow/proof-workflows/" class="dropdown-item">Workflow Structure</a>
+</li>
+                                    
+<li>
+    <a href="../../UI/creating-workflows/" class="dropdown-item">Creating Workflows</a>
+</li>
+                                    
+<li>
+    <a href="../../Workflow/monitoring-workflows/" class="dropdown-item">Monitoring Workflows</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Blocks</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../Block/overview/" class="dropdown-item">Introduction</a>
+</li>
+                                    
+<li>
+    <a href="../../UI/using-proof-blocks/" class="dropdown-item">Using Blocks</a>
+</li>
+                                    
+<li>
+    <a href="../../Block/creating-new-templates/" class="dropdown-item">Creating new Templates</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">UI</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../UI/creating-workflows/" class="dropdown-item">Creating Workflows</a>
+</li>
+                                    
+<li>
+    <a href="../../Workflow/monitoring-workflows/" class="dropdown-item">Monitoring Workflows</a>
+</li>
+                                    
+<li>
+    <a href="../../UI/configs/" class="dropdown-item">Configuration</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../faq/" class="nav-link">FAQ</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">About</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../about/" class="dropdown-item">About</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">Release Notes</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../about/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" class="nav-link disabled">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item dropdown">
+                              <button id="theme-menu" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static" aria-label="Toggle theme" class="nav-link dropdown-toggle">
+                                <i class="fa-solid fa-circle-half-stroke fa-fw"></i>
+                                <span class="d-lg-none ms-2">Toggle theme</span>
+                              </button>
+                              <ul class="dropdown-menu dropdown-menu-end">
+                                <li>
+                                  <button class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="true">
+                                    <i class="fa-solid fa-sun fa-fw"></i>
+                                    <span class="ms-2">Light</span>
+                                    <i class="fa-solid fa-check ms-auto"></i>
+                                  </button>
+                                </li>
+                                <li>
+                                  <button class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+                                    <i class="fa-solid fa-moon fa-fw"></i>
+                                    <span class="ms-2">Dark</span>
+                                    <i class="fa-solid fa-check ms-auto d-none"></i>
+                                  </button>
+                                </li>
+                                <li>
+                                  <button class="dropdown-item d-flex align-items-center" data-bs-theme-value="auto" aria-pressed="false">
+                                    <i class="fa-solid fa-circle-half-stroke fa-fw"></i>
+                                    <span class="ms-2">Auto</span>
+                                    <i class="fa-solid fa-check ms-auto d-none"></i>
+                                  </button>
+                                </li>
+                              </ul>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <script src="../../js/darkmode.js"></script>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#release-notes" class="nav-link">Release Notes</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#version-130" class="nav-link">Version 1.3.0</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#version-120" class="nav-link">Version 1.2.0</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#version-110" class="nav-link">Version 1.1.0</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#version-100" class="nav-link">Version 1.0.0</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="release-notes">Release Notes<a class="headerlink" href="#release-notes" title="Permanent link">&para;</a></h1>
+<h2 id="version-130">Version 1.3.0<a class="headerlink" href="#version-130" title="Permanent link">&para;</a></h2>
+<h3 id="new-features">New Features<a class="headerlink" href="#new-features" title="Permanent link">&para;</a></h3>
+<h4 id="monitoring-execution-tracking">Monitoring &amp; Execution Tracking<a class="headerlink" href="#monitoring-execution-tracking" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Block Status Monitoring Service Integration</strong>: New monitoring service integration for real-time block status updates</li>
+<li>Visualize individual block execution states and communication points</li>
+<li><strong>Enhanced Execution Parameters Visualization</strong>: </li>
+<li>Full visibility of workflow start and run parameters in monitoring view</li>
+<li>Detailed execution settings display with better layout and readability</li>
+</ul>
+<h4 id="standard-templates-and-workflows">Standard Templates and Workflows<a class="headerlink" href="#standard-templates-and-workflows" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>PROOF-Importer Integration</strong>: Replaced data.sql with proof-importer for database initialization</li>
+<li>More robust and maintainable approach for initial data population</li>
+<li><strong>Standard Templates</strong>: Added more standard templates and updated default values</li>
+</ul>
+<h4 id="user-interface-improvements">User Interface Improvements<a class="headerlink" href="#user-interface-improvements" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Template Usage Visualization</strong>: View all workflows and blocks that depend on a specific template</li>
+<li>Prevents accidental deletion of in-use templates</li>
+<li><strong>Alphabetical Sorting</strong>: Consistent sorting across all tables and lists</li>
+<li>Inputs displayed alphabetically in template editor and block configuration</li>
+<li>Executions sorted by startedAt timestamp</li>
+</ul>
+<h4 id="backend-improvements">Backend Improvements<a class="headerlink" href="#backend-improvements" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Loop Handling Improvements</strong>: Added <code>startValue</code> field for inputs to support iterative/loop scenarios</li>
+<li>Enables proper initialization of inputs that participate in feedback loops</li>
+<li>Distinguishes between static initial parameters and runtime execution values</li>
+<li><strong>Default field</strong>:  Added <code>defaultValue</code> field for static and non-static inputs </li>
+<li>Used when no input value arrives in the expected time period</li>
+<li>Mandatory for optional static inputs  </li>
+<li><strong>Java Wrapper Implementation</strong>: New Java wrapper for Java-based model program execution</li>
+<li>Fixed command parsing to avoid jar startup issues</li>
+<li><strong>Input/Output Type Improvements</strong>:</li>
+<li>New array data types: STRING_ARRAY, INTEGER_ARRAY, FLOAT_ARRAY, OBJECT_ARRAY</li>
+<li>FILE_NAME type support for file parameter handling</li>
+<li><strong>Synchronization Strategy Extension</strong>: Add new strategy <em>ALL_VALUES</em></li>
+<li><em>ALL_VALUES</em> triggers model execution when all required values are available</li>
+</ul>
+<h3 id="bug-fixes-improvements">Bug Fixes &amp; Improvements<a class="headerlink" href="#bug-fixes-improvements" title="Permanent link">&para;</a></h3>
+<h4 id="stability-reliability">Stability &amp; Reliability<a class="headerlink" href="#stability-reliability" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Block Container Memory Management</strong>: Fixed block container map clearing before re-population</li>
+<li>Prevents memory leaks from accumulated block references</li>
+<li>Ensures proper cleanup between workflow executions</li>
+<li><strong>Synchronized Input Access</strong>: Thread-safe access to currentInputs map in worker</li>
+<li>Prevents race conditions in concurrent input handling</li>
+<li>Improves stability under load</li>
+<li><strong>Error Step Handling</strong>: Corrected ERROR_STEP emission logic</li>
+<li>Only sends ERROR_STEP on actual timeout when waiting for inputs</li>
+<li>Reduces false positive error states</li>
+</ul>
+<h4 id="configuration-consistency">Configuration &amp; Consistency<a class="headerlink" href="#configuration-consistency" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Export Functionality</strong>: Fixed missing files folder in execution export</li>
+<li>Complete ZIP exports now include all necessary file references</li>
+<li>Improved export reliability for sharing executions</li>
+</ul>
+<hr />
+<h2 id="version-120">Version 1.2.0<a class="headerlink" href="#version-120" title="Permanent link">&para;</a></h2>
+<h3 id="new-features_1">New Features<a class="headerlink" href="#new-features_1" title="Permanent link">&para;</a></h3>
+<h4 id="workflow-configuration">Workflow Configuration<a class="headerlink" href="#workflow-configuration" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>MQTT Integration</strong>: </li>
+<li>New MQTT Subscriber and Publisher attachments for IoT and real-time data streaming integration</li>
+<li><strong>EBM (Energy Building Model) Workflow Support</strong>: </li>
+<li>New workflow templates for energy building model simulations and research workflows</li>
+<li><strong>Workflow Naming Convention</strong>: Demo workflows now clearly marked with <code>demo_</code> prefix</li>
+</ul>
+<h4 id="block-customization-configuration">Block Customization &amp; Configuration<a class="headerlink" href="#block-customization-configuration" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Block Parameter Overrides</strong>: Blocks can now override template defaults with fine-grained control</li>
+<li>Customize container image per block</li>
+<li>Configure sync strategy at block level</li>
+<li>Mark shutdown-relevant parameters</li>
+<li>Track which values differ from template defaults</li>
+<li><strong>Improved Block Visualization</strong>: Enhanced visual representation of block properties in the editor</li>
+<li>Better parameter visibility</li>
+</ul>
+<h4 id="user-interface-monitoring-enhancements">User Interface &amp; Monitoring Enhancements<a class="headerlink" href="#user-interface-monitoring-enhancements" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Comprehensive Monitoring View</strong>:</li>
+<li>Full execution parameters and settings visualization</li>
+<li>Enhanced ExecutionSettingsPanel with workflow start and run parameters</li>
+<li>Better visibility into execution configuration and state</li>
+<li>Improved parameter display for debugging and analysis</li>
+<li><strong>Consistent Data Organization</strong>:</li>
+<li>Alphabetical sorting of inputs in template editor and configuration</li>
+<li>Alphabetical sorting of blocks in configuration views</li>
+<li>Alphabetical sorting of templates in usage lists</li>
+<li>Improved discoverability and consistency across UI</li>
+<li><strong>Template Management Dialog</strong>: Simplified and enhanced templates display with better UX</li>
+<li><strong>Enhanced Localization</strong>: Complete multi-language support (English/German) for all new features</li>
+<li><strong>Template Usage Tracking</strong>: </li>
+<li>View all workflows and blocks that depend on a specific template</li>
+<li>Prevents accidental deletion of in-use templates with dependency visualization</li>
+<li>Enhanced template management with usage information in the UI</li>
+</ul>
+<h3 id="bug-fixes-improvements_1">Bug Fixes &amp; Improvements<a class="headerlink" href="#bug-fixes-improvements_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Adjusted block logging queue names for consistency</li>
+<li>Added robust error handling for block status updates in orchestrator</li>
+<li>Prevents orchestrator crashes from individual block errors</li>
+<li>Fixed block container map that was preventing memory cleanup across multiple workflow runs</li>
+</ul>
+<h3 id="performance-infrastructure">Performance &amp; Infrastructure<a class="headerlink" href="#performance-infrastructure" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Improved Bundle Size Management</strong>: UI redesigned with better code organization</li>
+<li><strong>Enhanced State Management</strong>: Better provider and state handling for new features</li>
+<li><strong>MQTT Library Support</strong>: paho-mqtt integration for IoT communication patterns</li>
+</ul>
+<hr />
+<h2 id="version-110">Version 1.1.0<a class="headerlink" href="#version-110" title="Permanent link">&para;</a></h2>
+<h3 id="new-features_2">New Features<a class="headerlink" href="#new-features_2" title="Permanent link">&para;</a></h3>
+<h4 id="execution-management">Execution Management<a class="headerlink" href="#execution-management" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Execution Export</strong>: Export complete workflow executions as ZIP files, including all configurations and attachments</li>
+<li>Non-admin users can export their executions</li>
+<li><strong>Execution Progress Tracking</strong>: Real-time visualization of execution progress with communication point (CP) tracking</li>
+<li>Current communication point is stored in the database during execution</li>
+<li>Progress bars and visualizations in the monitoring interface</li>
+<li><strong>Execution Logging</strong>: Enhanced logging capabilities for debugging and monitoring workflow executions</li>
+</ul>
+<h4 id="file-management">File Management<a class="headerlink" href="#file-management" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>User Data Directory</strong>: New dedicated <code>userdata</code> directory for user-managed files accessible by workflow blocks (e.g., FileReader)</li>
+<li><strong>Attachments Directory</strong>: Separate <code>attachments</code> directory for workflow-specific attachments with subdirectory support</li>
+<li><strong>File Upload/Download API</strong>: New file controller endpoints for uploading and downloading files via the API</li>
+<li><strong>Enhanced Attachment Handling</strong>: Improved attachment paths and ZIP entry handling during execution export</li>
+</ul>
+<h4 id="workflow-configuration_1">Workflow Configuration<a class="headerlink" href="#workflow-configuration_1" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Configurable Shutdown Timeout</strong>: Users can now configure the shutdown timeout for workflows via configuration settings</li>
+<li><strong>PROOF_DIR Environment Variable</strong>: Support for custom PROOF directory paths via environment variables</li>
+<li><strong>Input/Output Visualization</strong>: Detailed visualization of input values and workflow parameters in the monitoring view</li>
+<li><strong>Text Color Customization</strong>: Added <code>text_Color</code> field for block customization in the UI</li>
+</ul>
+<h4 id="user-interface-improvements_1">User Interface Improvements<a class="headerlink" href="#user-interface-improvements_1" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Admin Role Management</strong>: New utility function to check user roles and permissions</li>
+<li><strong>Improved Pagination</strong>: Default pagination size adjusted to 25 items for better usability</li>
+<li><strong>Enhanced Monitoring Interface</strong>: </li>
+<li>Better visualization of block status and execution progress</li>
+<li>Improved layout and readability in monitoring details</li>
+<li>Enhanced edge and node context menus in the editor</li>
+</ul>
+<h4 id="development-infrastructure">Development &amp; Infrastructure<a class="headerlink" href="#development-infrastructure" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>MQTT Support</strong>: Added paho-mqtt library to worker for MQTT-based communication capabilities</li>
+<li><strong>Automatic Image Download</strong>: PROOF now automatically downloads missing Docker images when needed, eliminating the need for manual image downloads</li>
+<li><strong>Logging Queue Updates</strong>: Updated logging queue names for improved log management</li>
+<li><strong>Fixed Orchestrator Logging Issues</strong>: Resolved various logging-related bugs and inconsistencies</li>
+<li><strong>Enhanced Error Handling</strong>: Improved exception handling and error messages across components</li>
+<li><strong>Updated Python Runtime Environment for Worker images</strong>: Use venv now</li>
+</ul>
+<hr />
+<h2 id="version-100">Version 1.0.0<a class="headerlink" href="#version-100" title="Permanent link">&para;</a></h2>
+<h3 id="initial-release">Initial Release<a class="headerlink" href="#initial-release" title="Permanent link">&para;</a></h3>
+<ul>
+<li>First public release of PROOF</li>
+<li>Docker-based workflow execution</li>
+<li>Python support for model programs</li>
+<li>Web-based UI for workflow creation and monitoring</li>
+<li>File-based data exchange</li>
+<li>Core blocks: FileReader, FileWriter, and data type converters</li>
+</ul></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+                <p>(c) 2025-2026 Karlsruhe Institute of Technology (KIT), Institute for Automation and Applied Informatics (IAI)</p>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
