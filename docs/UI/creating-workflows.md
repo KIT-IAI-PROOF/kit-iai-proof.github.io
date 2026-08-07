@@ -40,6 +40,7 @@ It provides a visual representation of the Workflow structure, allowing users to
    - It is not possible to change the basic functionality of a Block, as it is defined by the Block Template. 
      - Some parameters which are inherited from the Block Template can be changed (e.g. the container *Image*). If they differ from the Block Template they are being marked visually.
      - It is possible to change all Template attributes as well as the associated Program and Attachments using the Template Configuration panel.
+   - **Inputs are displayed alphabetically** in the Block configuration for better organization and discoverability.
 
    ![Configure Block Settings](../Images/workflow/2026-04-30_block_settings_1.png)
    ![Configure Block Settings](../Images/workflow/2026-04-30_block_settings_2.png)

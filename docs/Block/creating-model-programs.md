@@ -10,7 +10,7 @@ This page describes how to create custom *Model Programs* that are required to b
 ## What is a Model Program?
 A *Model Program* is an executable file (such as a Python script, Java program, or MATLAB script) that contains the logic to be executed by a *Block* in PROOF.
 
-Since the current version of the PROOF Docker containers use Python as programming language for *Model Programs*, the following documentation refers to Python specifically. The extension to other programming languages (Java, MATLAB) will be provided in future releases of PROOF (2026).
+Since the current version of the PROOF Docker containers use Python as the primary programming language for *Model Programs*, the following documentation refers to Python specifically. Java support is available starting with version 1.3.0 through a Java Wrapper implementation.
 
 A *Model Program* must be able to run independently and perform the required computations to ensure it works as expected when integrated into a *Block* within a *Workflow*.
 
@@ -22,7 +22,16 @@ The *Model Program* must be implemented as a subclass of the `proofcore.base.bas
 - **`step()`**: Execution method called for each simulation step
 - **`finalize()`**: Termination method called at the end
 
-### Template Script
+### Java Implementation Requirements (Version 1.3.0+)
+
+Java-based Model Programs are supported through a dedicated Java Wrapper implementation:
+
+- Java programs should provide a main class that can be executed as a standalone JAR file
+- The Java wrapper handles command parsing to properly execute Java-based model programs
+- Ensure proper JAR file structure and manifest configuration
+- The wrapper supports both individual Java classes and packaged JAR applications
+
+### Python Template Script
 
 To ease the generation of new *Model Programs*, a template Python script is provided in the PROOF GitHub repository **proof-sim-core** under `proofcore/templates/WrapperTemplate.py`. This template includes:
 

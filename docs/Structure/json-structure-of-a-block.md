@@ -86,3 +86,32 @@ This JSON structure can be used to import the *Block* into a PROOF installation 
   - **metadata**: Additional metadata for the output (can be any structure or empty).
 - **startParameters**: A section for any additional parameters needed at the start and run of the *Block* (can be empty).
 
+## Synchronization Strategies
+
+PROOF supports multiple synchronization strategies for controlling how Blocks execute:
+
+### WAIT_FOR_SYNC Strategy (Default)
+The WAIT_FOR_SYNC strategy triggers model execution based on communication steps:
+- Blocks execute when explicitly triggered by the orchestrator during a communication step
+- Useful for time-step based simulations where all blocks advance together
+
+### ALL_VALUES Strategy (Version 1.3.0+)
+The ALL_VALUES strategy triggers model execution when all required input values are available:
+- Blocks execute as soon as all required inputs have been provided
+- Enables more responsive and event-driven execution patterns
+- Useful for workflows where blocks can process inputs independently of simulation steps e.g. writing to file
+- Allows asynchronous data flow between blocks
+
+## Input Configuration
+
+### startValue Field
+Starting with version 1.3.0, each input can include a **startValue** field:
+- Provides the initial value for inputs that participate in feedback loops
+- Enables proper initialization of iterative workflows and feedback loops
+
+### defaultValue Field
+Starting with version 1.3.0, each input can include a **defaultValue** field:
+- Specifies a fallback value when no input value arrives in the expected time period
+- Applicable to both static and non-static inputs
+- Ensures robust handling of missing or delayed input values
+

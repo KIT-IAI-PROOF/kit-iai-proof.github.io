@@ -29,12 +29,13 @@ json-structure-of-a-block.md
 
 1. **Develop the Program**:
 
-    <span style="color:red">**Note:** in the current PROOF version, only Python is supported. Therefore, the model file must be a Python script and the documentation hereafter refers to Python specifically.</span>
+    <span style="color:red">**Note:** in the current PROOF version, Python is the primary supported language. Java support is available for specific use cases. The documentation hereafter refers to Python specifically, with Java wrapper information available in the [Creating Model Programs](creating-model-programs.md) guide.</span>
 
     Create the executable model file that contains the model's logic. This file should be able to run independently and perform the required computations. For this, you can use any programming language supported by PROOF (e.g., Python, Java, MATLAB).
 
     This file will be the core of your *Block Template*. It can be built and should be able to be tested outside of PROOF to ensure it works as expected.
     - **PYTHON**: The model file must be a subclass of *proofcore.base.basewrapper.py* and implement the required methods for initialization, execution (*step*), and termination.
+    - **JAVA**: Java model programs are supported through a Java wrapper implementation (available in version 1.3.0+). Refer to [Creating Model Programs](creating-model-programs.md) for Java-specific implementation details.
 
 2. **Identify Attachments**
 
@@ -79,7 +80,19 @@ To create a new *Template* in the PROOF UI, follow these steps:
     - Click on the "**+ ADD**" button to create a new *Template*.
     - Fill in the required fields, such as ID, label, description, and select the previously created *Program*.
     - Define the inputs and outputs of the *Template* according to the model's requirements.
+    - **Input Configuration** (Version 1.3.0+):
+      - **startValue** field: Initial value for inputs that participate in feedback loops
+      - **defaultValue** field: Fallback value when input data does not arrive in the expected time period
+        - Mandatory for optional static inputs
+    - **Supported Data Types** include:
+      - Primitive types: STRING, FLOAT, INTEGER
+      - Array types: STRING_ARRAY, INTEGER_ARRAY, FLOAT_ARRAY, OBJECT_ARRAY (available in version 1.3.0+)
+      - FILE_NAME type for file parameter handling (available in version 1.3.0+)
     - Save the *Template*.
 
 After having created a new *Template*, it can be used immediately to instantiate *Blocks* in *Workflows* using the  *PROOF Workflow Editor*. 
 You can find the *Template* in the right sidebar of the *PROOF Workflow Editor* and drag and drop it onto the *Workflow* canvas.
+
+## Template Usage Tracking
+Starting with version 1.3.0, PROOF provides template usage tracking:
+- **Prevent Accidental Deletion**: The system prevents deletion of in-use templates with dependency visualization

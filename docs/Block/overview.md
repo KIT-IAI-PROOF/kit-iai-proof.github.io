@@ -51,6 +51,28 @@ Inputs are the data that a Block receives from other Blocks or external sources.
 
 Both types of inputs can be **required** or **optional**, depending on the Block's definition (see [Creating new Blocks and Templates](creating-new-templates.md)).
 
+### Supported Data Types
+
+PROOF supports a variety of data types for inputs and outputs:
+
+- **Primitive Types**: STRING, FLOAT, INTEGER
+- **Array Types** (Version 1.3.0+): STRING_ARRAY, INTEGER_ARRAY, FLOAT_ARRAY, OBJECT_ARRAY
+  - Array types enable handling of multiple values in a single input/output
+  - Useful for batch processing and complex data structures
+- **File Types** (Version 1.3.0+): FILE_NAME
+  - FILE_NAME type supports file parameter handling
+  - Enables workflows to work with file references and paths
+
+### Input Configuration Fields (Version 1.3.0+)
+
+**startValue Field**:
+- Provides the initial value for inputs that participate in feedback loops
+- Enables proper initialization of feedback loops in iterative workflows
+
+**defaultValue Field**:
+- Specifies a fallback value when no input value arrives in the expected time period
+- Can be configured for both static and non-static inputs
+
 ## Outputs
 
 Outputs are the data that a Block produces after processing the inputs. Similar to inputs, outputs can be of various types.
