@@ -47,6 +47,6 @@ The **Energy-Building-Model (EBM)** workflow simulates a building's thermal beha
    - `initial_indoor_temp`: Set the starting indoor temperature (in °C)
 
 2. **Controller Block** - Manages the heating/cooling system and regulates temperature based on feedback from the building
-   - `indoor_temp` (start value): Set the initial controller setpoint temperature (in °C)
+   - **Inputs**/`indoor_temp` (start value): Set the initial controller setpoint temperature (in °C)
 
 3. Run the workflow to see how the building temperature evolves over time
