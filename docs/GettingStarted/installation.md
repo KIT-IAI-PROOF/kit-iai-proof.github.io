@@ -88,16 +88,8 @@ Data exchange with PROOF works via the `proof-environment/data` folder structure
 
 Files placed in the `userdata` folder can be referenced in your workflows for reading and writing operations.
 
-## Test your installation
-To test your installation, you can use the workflow *FileReader-to-FileWriter*. It contains two blocks:
-- the *FileReader* which reads a file given as input parameter and provides the next line each step
-- the *FileWriter* which receives data and appends it to the file which name is given as an input parameter.
+## Next Steps
 
-To start the workflow you can use the `input.txt` as input file for the *FileReader*. It is already available in the `userdata` folder.  
-As output file for the *FileWriter* simply use a custom file name e.g. *out.txt*. The output file will be stored in the `userdata` directory.
-
-When you see that the execution has the status SHUT_DOWN, you can check the contents of the output file (e.g. *out.txt*) which should be the same as the input file for this demo workflow. This can e.g. be done via console:
-```
-cd proof-environment/data/userdata
-cat out.txt
-```
+To test your installation and explore demo workflows, see the [Tutorial & Demo Workflows](tutorial.md) page. There you'll find step-by-step instructions for:
+- The FileReader-to-FileWriter workflow to verify your installation
+- Energy Building Model (EBM) simulations
