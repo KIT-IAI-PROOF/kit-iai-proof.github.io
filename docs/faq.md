@@ -99,7 +99,7 @@ Alternatively, use `docker compose down -v` to remove volumes along with contain
 ## Getting Help
 
 #### Where can I find more documentation?
-- [Getting Started](GettingStarted/getting-started.md): Getting started with PROOF
+- [Getting Started](GettingStarted/installation.md): Getting started with PROOF
 - [Structure](Structure/proof-structure.md): PROOF structure and concepts
 - [Blocks](Block/overview.md): Block structure and components
 - [Workflows](Workflow/proof-workflows.md): Workflow creation and management
