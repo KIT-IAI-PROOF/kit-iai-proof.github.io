@@ -28,8 +28,5 @@ corner of the Execution Monitoring interface.
 ![Run](../Images/workflow/2026-04-30_monitoring_details_1.png)
 ![Run](../Images/workflow/2026-04-30_monitoring_details_2.png)
 
-### 5. **Execution Timeouts**
-The *Worker Timeout* and *Input Timeout* of the *Workflow* are shown in the execution settings and can be overridden per execution in the start parameters before running the *Workflow* (see [Workflow Timeouts](../UI/creating-workflows.md#workflow-timeouts)).
-
-### 6. **Export Executions**
+### 5. **Export Executions**
 - **Export Execution**: Export a complete workflow execution as a ZIP file, including all configurations, templates and attachments. This feature is available to all users.

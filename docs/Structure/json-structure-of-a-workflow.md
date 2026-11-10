@@ -45,6 +45,8 @@ Here is as an example the JSON structure for the PROOF *Workflow* *FileReader2Fi
     "startPoint": 1,
     "endPoint": 10,
     "duration": 500,
+    "workerTimeout": 10,
+    "inputTimeout": 10,
     "stepSizeDefinitions": {
       "1": {
         "startPoint": 2,
@@ -76,5 +78,11 @@ It is assumed that the referenced blocks already exist in th e PROOF database wh
   - **inbound**: The localId of the source *Block* and port name. The port name must match the name of an output name of the source *Block*.
   - **outbound**: The localId of the destination *Block* and port name. The port name must match the name of an input name of the target *Block*.
 - **stepBasedConfig**: Configuration details specific to step-based communication, including start and end points, duration, and step size definitions.
+  - **startPoint**: The communication point at which the simulation starts.
+  - **endPoint**: The communication point at which the simulation ends.
+  - **duration**: The time between two simulation status checks in milliseconds.
+  - **workerTimeout**: The *Worker Timeout* in seconds, i.e., how long the orchestrator waits for notify messages from all workers before finalizing and shutting down the *Workflow* (see [Workflow Timeouts](../UI/creating-workflows.md#worker-timeout-workertimeout)).
+  - **inputTimeout**: The *Input Timeout* in seconds, i.e., how long a worker waits at most for a required input value before using its `defaultValue` or aborting the step with a timeout (see [Workflow Timeouts](../UI/creating-workflows.md#input-timeout-inputtimeout)).
+  - **stepSizeDefinitions**: Step size definitions for individual *Blocks* of the *Workflow*.
 - **simulationStrategy**: The strategy used for simulation execution (e.g., WAIT_AND_CONTINUE).
 
