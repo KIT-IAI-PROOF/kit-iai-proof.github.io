@@ -35,6 +35,50 @@ It provides a visual representation of the Workflow structure, allowing users to
      ![Configure Workflow Settings](../Images/workflow/2026-04-30_workflow_settings_1.png)
      ![Configure Workflow Settings](../Images/workflow/2026-04-30_workflow_settings_2.png)
 
+## Workflow Timeouts
+
+Step-based *Workflows* provide two configurable timeouts that control the behaviour of an execution
+when the process does not proceed as expected. Both values are interpreted in **seconds** and are
+part of the *Workflow's* *Step-Based Configuration* (`stepBasedConfig`).
+
+### Worker Timeout (`workerTimeout`)
+
+The *Worker Timeout* defines how long the orchestrator waits for notify messages from **all** workers
+(*Blocks*) of the *Workflow*. The waiting time accumulates over consecutive scheduling cycles. As soon
+as it exceeds the configured *Worker Timeout*, the orchestrator finalizes all blocks and shuts down the
+*Workflow*.
+
+- **Default**: `10` seconds
+- Increase this value for *Blocks* with long execution times per step (e.g., complex FMU model
+  computations) so that a slow but healthy *Block* does not cause a premature shutdown.
+- Decrease this value to fail fast when a *Workflow* is expected to respond quickly.
+
+### Input Timeout (`inputTimeout`)
+
+The *Input Timeout* defines how long a worker waits at most for a required input value during a step.
+If the timeout is exceeded, the worker tries to use the `defaultValue` of the corresponding input if
+one is defined. If no default value is available, the step returns with a timeout (error) for
+this *Block*.
+
+- **Default**: `10` seconds
+- Values below `0.5` seconds are clamped to `0.5` seconds.
+- The value is propagated to each block container
+
+### Setting the Timeouts
+
+The timeouts can be set in two places:
+
+- **Workflow Configuration**: In the *Configs Tab*, edit the *Workflow* and set *Worker Timeout* and
+  *Input Timeout* in the *Step-Based Configuration* panel. These values are stored with the *Workflow*
+  and used for every execution.
+- **Execution Start Parameters**: In the *Monitoring* view, both timeouts can be overridden per
+  execution in the start parameters before running the *Workflow*. The entered values are used for
+  this execution only and do not change the stored *Workflow* configuration.
+
+**Note**: For PROOF installations, deployment-level defaults for both timeouts can also be configured
+via the environment settings `proof.orchestration.worker.timeout` (orchestrator) and
+`proof.worker.input.timeout` (worker). The *Workflow*-specific values take precedence.
+
 ## Configure *Block* Settings
    - You can configure the Name of each Block by right-clicking on it, selecting "Settings" and accessing the Block configuration panel.
    - It is not possible to change the basic functionality of a Block, as it is defined by the Block Template. 
@@ -66,11 +110,12 @@ Violating these restrictions will cause errors when executing the workflow, as D
    - This saves the Workflow to the PROOF database, making it available for execution and further editing.
      ![Save Workflow](../Images/workflow/2026-04-30_editor_connect_blocks_save.png)
 
-## Executing the Workflow via Workflow Editor
+### Executing the workflow
+## ... via Workflow Editor
    - After having saved the Workflow, you can execute it by navigating to the *START WORKFLOW* button in the top right corner of the Workflow editor.
    - You must enter all relevant Execution values in the pop-up execution dialog, such as Execution ID, Description, and other parameters specific to the Workflow.
 
-## Executing the Workflow via Monitoring Panel
+## ... via Monitoring Panel
    - You can also start a saved Workflow from the *Workflow Monitoring* panel in the PROOF UI.
    - Click the *Workflow Monitoring* menu item in the left menu bar to open the monitoring interface.
    - Press the *RUN* button in the top right corner of the Workflow Monitoring interface. A Combo box appears listing all saved Workflows.

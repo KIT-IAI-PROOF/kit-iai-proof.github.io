@@ -73,7 +73,7 @@ It is assumed that the referenced blocks already exist in th e PROOF database wh
 - **communicationParadigm**: The communication paradigm used in the *Workflow* (e.g., STEPBASED).
 - **blocks**: An array of *Block* references included in the *Workflow*. Each entry contains:
   - **localId**: A unique local identifier for the *Block* within the *Workflow*.
-  - **globalId**: The global identifier of the *Block* template used.
+  - **globalId**: The global identifier of the *Block*.
 - **connections**: An array defining the connections between the referenced *Blocks*. Each connection includes:
   - **inbound**: The localId of the source *Block* and port name. The port name must match the name of an output name of the source *Block*.
   - **outbound**: The localId of the destination *Block* and port name. The port name must match the name of an input name of the target *Block*.
@@ -104,7 +104,7 @@ Here is as an example the JSON structure for the PROOF *Block* *FileWriter*:
   "id": "block_file_writer",
   "name": "File Writer",
   "description": "Write data to a file",
-  "containerImage": "ghcr.io/kit-iai-proof/proof-worker-python:1.1.0",
+  "containerImage": "ghcr.io/kit-iai-proof/proof-worker-python:1.4.0",
   "communicationParadigm": "STEPBASED",
   "programId": "prog_file_writer",
   "inputs": [
