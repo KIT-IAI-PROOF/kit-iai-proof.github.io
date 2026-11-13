@@ -93,3 +93,4 @@ Files placed in the `userdata` folder can be referenced in your workflows for re
 To test your installation and explore demo workflows, see the [Tutorial & Demo Workflows](tutorial.md) page. There you'll find step-by-step instructions for:
 - The FileReader-to-FileWriter workflow to verify your installation
 - Energy Building Model (EBM) simulations
+- FMU (Functional Mock-up Unit) integration workflows
