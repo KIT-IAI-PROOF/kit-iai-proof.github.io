@@ -73,7 +73,7 @@ It is assumed that the referenced blocks already exist in th e PROOF database wh
 - **communicationParadigm**: The communication paradigm used in the *Workflow* (e.g., STEPBASED).
 - **blocks**: An array of *Block* references included in the *Workflow*. Each entry contains:
   - **localId**: A unique local identifier for the *Block* within the *Workflow*.
-  - **globalId**: The global identifier of the *Block* template used.
+  - **globalId**: The global identifier of the *Block*.
 - **connections**: An array defining the connections between the referenced *Blocks*. Each connection includes:
   - **inbound**: The localId of the source *Block* and port name. The port name must match the name of an output name of the source *Block*.
   - **outbound**: The localId of the destination *Block* and port name. The port name must match the name of an input name of the target *Block*.
