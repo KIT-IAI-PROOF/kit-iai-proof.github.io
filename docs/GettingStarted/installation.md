@@ -34,6 +34,38 @@ Starting with version 1.1.0, PROOF automatically downloads missing Docker images
 docker pull ghcr.io/kit-iai-proof/proof-worker-python:1.4.0
 ```
 
+### Where worker images are found
+The PROOF worker images are published as containers in the GitHub Container Registry of the *KIT-IAI-PROOF* organization and are pulled from there as needed:
+
+- `ghcr.io/kit-iai-proof/proof-worker-python` — base image for **Python** worker programs
+- `ghcr.io/kit-iai-proof/proof-worker-java` — base image for **Java** worker programs
+
+Each image has its own package page on GitHub, where all published versions (`tags`) can be browsed, e.g. [proof-worker-python](https://github.com/orgs/KIT-IAI-PROOF/packages/container/package/proof-worker-python) or [proof-worker-java](https://github.com/orgs/KIT-IAI-PROOF/packages/container/package/proof-worker-java).
+
+### The image naming scheme
+The name of an image encodes the *runtime environment* and the *version*. A minimal image tag looks like this:
+
+```
+proof-worker-<environment>:<version>
+```
+
+For example:
+
+- `proof-worker-python:1.4.0` — the current version of the base Python worker image
+- `proof-worker-java:1.4.0` — the current version of the base Java worker image
+
+Some worker images also ship packages that are **not required by every block** (e.g. `fmpy`, which is only needed for *FMU* blocks). These are provided as dedicated variants whose tag appends the respective package list to the version:
+
+```
+proof-worker-<environment>:<version>-<package-list>
+```
+
+For example:
+
+- `proof-worker-python:1.4.0-fmpy` — the Python worker image including the additional `fmpy` package
+
+The registry additionally maintains `latest` / `latest-<package-list>` tags that always point to the most recent release, e.g. `proof-worker-python:latest` and `proof-worker-python:latest-fmpy`. For reproducible results you should prefer a concrete version tag (such as `1.4.0`) over `latest`.
+
 ## Start PROOF
 To start PROOF, navigate to proof-environment and start PROOF using the provided startPROOF scripts:  
 **Linux / Mac:**
