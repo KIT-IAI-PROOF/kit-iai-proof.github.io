@@ -29,4 +29,3 @@ Starting with version 1.4.0, *Workflows* and *Templates* can be exported from th
 - **Export Workflows**: A PROOF *Workflow* can be exported as a package that contains all the necessary information about the *Workflow*, including its structure, references to *Blocks*, connections, and configurations.<!--This package can then be imported into another PROOF instance to recreate the same *Workflow*.-->
 - **Export Templates**: A *Block Template* can be exported together with its associated *Programs* and *Attachments* for reuse in other *Workflows* or PROOF instances.
 
-See [Configuration - Export Configs](../UI/configs.md#5-export-configs) for details on how to export elements in the UI.
