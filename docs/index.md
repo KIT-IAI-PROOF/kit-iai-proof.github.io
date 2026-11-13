@@ -58,7 +58,7 @@ Furthermore, the recipient of this documentation is an ordinary user, who likes 
 - PROOF *Workflows*
     - [Workflow Structure](Workflow/proof-workflows.md)
     - [Creating Workflows](UI/creating-workflows.md)
-    - [Monitoring Workflows](Workflow/monitoring-workflows.md)
+    - [Monitoring Workflows](Workflow/monitoring-executions.md)
 <!--
     - [Running Workflows](Workflow/running-workflows.md)
 -->
@@ -82,8 +82,8 @@ Furthermore, the recipient of this documentation is an ordinary user, who likes 
 -->
 - PROOF UI
     - [Create a new *Workflow*](UI/creating-workflows.md)
-    - [Start a *Workflow*](Workflow/monitoring-workflows.md#2-run-workflow)
-    - [Monitor a running *Workflow*](Workflow/monitoring-workflows.md)
+    - [Start a *Workflow*](Workflow/monitoring-executions.md#2-run-workflow)
+    - [Monitor a running *Workflow*](Workflow/monitoring-executions.md)
     - [Configure Elements](UI/configs.md)
         - [Configure a *Workflow*](UI/configs.md#1-workflow-configs)
         - [Configure a *Block Template*](UI/configs.md#2-templates-configs)

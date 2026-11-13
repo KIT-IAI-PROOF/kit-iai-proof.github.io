@@ -30,7 +30,7 @@ nav:
   - Workflows:
     - Workflow Structure: Workflow/proof-workflows.md
     - Creating Workflows: UI/creating-workflows.md
-    - Monitoring Workflows: Workflow/monitoring-workflows.md
+    - Monitoring Workflows: Workflow/monitoring-executions.md
   - Blocks:
     - Introduction: Block/overview.md
     - Using Blocks: UI/using-proof-blocks.md
@@ -40,7 +40,7 @@ nav:
     #- Overview: Program/proof-programs.md 
   - UI:
     - Creating Workflows: UI/creating-workflows.md
-    - Monitoring: Workflow/monitoring-workflows.md
+    - Monitoring: Workflow/monitoring-executions.md
     - Configuration: UI/configs.md
   - FAQ: faq.md
   - About:
