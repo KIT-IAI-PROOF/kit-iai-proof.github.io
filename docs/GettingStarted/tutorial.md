@@ -64,7 +64,7 @@ The **Java Reader2Writer** workflow demonstrates the Java support in PROOF (avai
 
 **Step-by-step instructions:**
 
-see [FileReader-to-FileWriter](### Test Your Installation: FileReader-to-FileWriter)
+see [FileReader-to-FileWriter](#test-your-installation-filereader-to-filewriter)
 
 ---
 

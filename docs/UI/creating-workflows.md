@@ -110,11 +110,12 @@ Violating these restrictions will cause errors when executing the workflow, as D
    - This saves the Workflow to the PROOF database, making it available for execution and further editing.
      ![Save Workflow](../Images/workflow/2026-04-30_editor_connect_blocks_save.png)
 
-## Executing the Workflow via Workflow Editor
+### Executing the workflow
+## ... via Workflow Editor
    - After having saved the Workflow, you can execute it by navigating to the *START WORKFLOW* button in the top right corner of the Workflow editor.
    - You must enter all relevant Execution values in the pop-up execution dialog, such as Execution ID, Description, and other parameters specific to the Workflow.
 
-## Executing the Workflow via Monitoring Panel
+## ... via Monitoring Panel
    - You can also start a saved Workflow from the *Workflow Monitoring* panel in the PROOF UI.
    - Click the *Workflow Monitoring* menu item in the left menu bar to open the monitoring interface.
    - Press the *RUN* button in the top right corner of the Workflow Monitoring interface. A Combo box appears listing all saved Workflows.
