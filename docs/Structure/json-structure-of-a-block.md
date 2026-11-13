@@ -61,7 +61,7 @@ Here is as an example the JSON structure for the PROOF *Block* *FileWriter*:
 ```
 This JSON structure can be used to import the *Block* into a PROOF installation or export it for sharing with others. The defined inputs and outputs ensure that the *Block* can be correctly integrated into PROOF *Workflows*.
 
-##Description of the JSON Fields
+## Description of the JSON Fields
 
 - **id**: A unique identifier for the *Block*.
 - **name**: The display name of the *Block*.
