@@ -31,7 +31,7 @@ Yes, PROOF generally supports feedback loops in simulations. While the technical
 ### Which Docker images can be used in Block Templates?
 Block Templates typically use the PROOF worker images from the GitHub Container Registry:
 
-- **Python workers**: `ghcr.io/kit-iai-proof/proof-worker-python:1.2.0`
+- **Python workers**: `ghcr.io/kit-iai-proof/proof-worker-python:1.4.0`
 - **Custom workers**: You can create custom Docker images based on the PROOF worker images
 
 When creating a Block Template, specify the container image in the `containerImage` field. PROOF will automatically download the image if it's not already available locally (v1.1.0+).
