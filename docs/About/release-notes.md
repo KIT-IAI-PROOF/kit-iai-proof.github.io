@@ -1,5 +1,77 @@
 # Release Notes
 
+## Version 1.4.0
+
+### New Features
+
+#### Execution Control & Timeouts
+- **Worker & Input Timeouts**: New configurable timeouts to control execution behavior
+  - Worker timeout: how long to wait for a response from workers before removing them
+  - Input timeout: how long to wait for input data before forwarding to the model (formerly named *process timeout* in the worker)
+  - Added *worker timeout* and *input timeout* fields to *StepBasedConfiguration* (proof-models)
+  - Timeouts configured for all workflow JSON files
+
+#### Messaging & Queue Improvements
+- **Stream Queues**: Orchestrator and worker now use stream queues for improved message handling
+- **Status & Value Update Queues**: New queues created for status and value updates
+- **Value Update Publishing**: Worker now publishes value updates
+- **AMQP Consumer Stopping**: Extended AMQP consumer stopping in proof-utils
+- **Removed AMQP Logging**: Removed AMQP logging for the ConfigManager
+
+#### User Interface Enhancements
+- **Multi-Select in Tables**: Added multi-select support across tables
+- **Log Window Improvements**:
+  - Support for multiple resizable log windows
+- **Image Dropdown Selection**: Templates can now select images out of all images used in all templates and blocks
+- **Data Flow Visualization**:
+  - Connection data and Input, Output visualization
+  - Basic data flow visualization
+- **Layout Improvements**: Reduced empty space and adaptive label column width based on multi-column layout
+- **Export Functionality**: Added workflow and template export functionality
+- **New Execution ID on Restart**: A new execution ID is created when restarting an execution
+- **Execution Label in Logs**: Possibility to use the execution label as a placeholder in the model log location
+
+#### Templates & Workflows
+- **New Templates**:
+  - `fmu_runner`
+  - FileReader and FileWriter Java versions
+  - EBM Fmu templates
+- **New Demo Workflows**:
+  - Java Reader2Writer workflow
+  - EBM with Fmus
+  - Config and Single Fmu (using `_adder.fmu_` for demonstration purposes)
+  - Description added for how to configure demos
+- **Latest Tag for Template JSONs**: Template JSONs now use the latest tag
+
+#### Startup & Deployment
+- **Improved Startup**: 
+  - Added `_waiting_for_service_` function
+  - Optional time measurement
+  - Possibility to disable startup-import
+- **Cross-System Line Endings**: Ensured `sh` file line endings are not overwritten when checking out on another system
+- **Docker Compose Rename**: `docker-compose.prod.yaml` renamed to `docker-compose.yaml`
+- **Containers**:
+  - Use `zulu` instead of `eclipse-temurin` image for the ConfigManager
+  - Fixed axios version to 1.18.1
+
+### Bug Fixes & Improvements
+
+#### Worker & Input Handling
+- **Missing Values Handling**: 
+  - Use `modelvarname` for `missingRequiredInputValues`
+  - Reworked all "needed values given" handling
+- **Logging Rework**: Simplified and reworked logging in proof-utils
+
+#### CI & Local Building
+- **Productive Tags**: CI descriptions adjusted so the *latest* tag is only built for productive tags
+- **Custom Sim-Core Version**: Added the possibility to choose a custom sim-core version for proof-worker-python image building
+- **Python Base Image**: Added pip and a real virtual environment (venv) to the proof-worker-python base image
+- **Local Building**:
+  - Use the CI Dockerfile for local builds
+  - Support different base images for proof-worker-python (local base image via `pom-local.xml`, custom local base image, or GitHub base image)
+
+---
+
 ## Version 1.3.0
 
 ### New Features
