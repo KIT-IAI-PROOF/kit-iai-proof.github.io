@@ -50,3 +50,104 @@ The **Energy-Building-Model (EBM)** workflow simulates a building's thermal beha
    - **Inputs**/`indoor_temp` (start value): Set the initial controller setpoint temperature (in °C)
 
 3. Run the workflow to see how the building temperature evolves over time
+
+---
+
+### Java Reader2Writer Demo Workflow (Version 1.4.0+)
+
+The **Java Reader2Writer** workflow demonstrates the Java support in PROOF (available since version 1.3.0), reading data with a Java-based *FileReader* block and writing it to a file with a Java-based *FileWriter* block.
+
+**What it demonstrates:**
+- How PROOF executes Java-based *Model Programs* through the Java wrapper
+- How Java *Block Templates* (Java FileReader / Java FileWriter) are used in a workflow
+- The equivalent data-flow concept to the *FileReader-to-FileWriter* workflow, but implemented in Java
+
+**Step-by-step instructions:**
+
+see [FileReader-to-FileWriter](### Test Your Installation: FileReader-to-FileWriter)
+
+---
+
+## FMU (Functional Mock-up Unit) Demo Workflows (Version 1.4.0+)
+
+FMU workflows allow you to integrate external simulation models and tools into PROOF. An FMU is a standardized format for sharing simulation models.
+
+### EBM with FMUs 
+
+The **EBM with FMUs** workflow extends the *Energy-Building-Model* by using [Functional Mock-up Units (FMUs)](https://fmi-standard.org/) to model the building components. It combines the FMU runner with the energy building model, allowing you to integrate external FMU models into a building simulation.
+
+**What it demonstrates:**
+- Usage of FMU templates which out- and inputs are specifically designed to run with one Fmu.
+
+**What it adds beyond ConfigFmuRunner:**
+- Uses FMU-specific configuration (FMU location and model name)
+- Adds additional output file handling:
+  - `file_name`: Custom output filename
+  - `additional_CRLF` (optional): Set to `true` to ensure the result of every step is written into a new line
+  - `printCP` (optional): Set to `true` to include communication point information in the output
+
+---
+
+### ConfigFmuRunner Workflow
+
+The **ConfigFmuRunner** workflow demonstrates how to use a pre-configured FMU that accepts multiple inputs and produces outputs. This workflow uses an **Adder** FMU as an example—a simple model that sums up to three input values.
+
+**What it does:**
+- Reads input data from a file
+- Passes it to the Adder FMU simulation model
+- Processes and writes the results to output files
+
+**Configuration steps:**
+
+1. **Config FMU Runner block:** This block manages the FMU execution
+   - `fmu_name`: Enter `Adder` (this must match the name defined in your *facility_param.json* located in `userdata`)
+
+2. **CSV Column Selector block:**
+   - `column_name`: Enter `sum` (selects which output column to extract)
+
+3. **File Reader - Python block:**
+   - `file_name`: Enter `adder_input.txt` (contains the input data for the FMU, already present in `userdata` directory)
+
+4. **File Writer - Extracted block** (for processed results):
+   - `file_name`: Enter a custom output filename
+   - `additional_CRLF` (optional): Set to `true` to ensure the result of every step is written into a new line
+
+5. **File Writer - Raw block** (for unprocessed results):
+   - `file_name`: Enter a custom output filename
+   - `additional_CRLF` (optional): Set to `true` to ensure the result of every step is written into a new line
+
+**Output:** You'll get two files—one with extracted/processed data and one with raw simulation data.
+
+---
+
+### SingleFmuRunner Workflow
+
+The **SingleFmuRunner** workflow provides more control over FMU execution. Instead of using a configuration file, you directly specify the FMU file and which inputs/outputs to use.
+
+**What it does:**
+- Loads an FMU file directly
+- Allows you to define specific inputs and outputs
+- Processes results through configurable file operations
+
+**Configuration steps:**
+
+1. **SingleFmuRunner block:**
+   - `fmu_file_path`: Enter the path to your FMU file, for example `fmus/adder.fmu`
+   - `fmu_input_list`: Specify inputs as a JSON array, for example `["input_1", "input_2", "input_3"]`
+   - `fmu_output_list` (optional): Specify outputs as a JSON array, for example `["sum"]`. If not specified, all outputs are used.
+
+2. **CSV Column Selector block:**
+   - `column_name`: Enter `sum` (selects which output column to extract)
+
+3. **File Reader - Python block:**
+   - `file_name`: Enter `adder_input.txt` (contains the input data for the FMU, already present in `userdata` directory)
+
+4. **File Writer - Extracted block:** (for processed results):
+   - `file_name`: Enter your custom output filename
+   - `additional_CRLF` (optional): Set to `true` to ensure the result of every step is written into a new line
+
+5. **File Writer - Raw block:** (for unprocessed results):
+   - `file_name`: Enter your custom output filename
+   - `additional_CRLF` (optional): Set to `true` to ensure the result of every step is written into a new line
+
+**Output:** Similar to ConfigFmuRunner, you'll generate both extracted and raw output files.
