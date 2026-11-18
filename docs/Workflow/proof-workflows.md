@@ -10,11 +10,10 @@ The following image illustrates the data model of a Workflow:
 ## Creating workflows 
 see: [Creating Workflows](../UI/creating-workflows.md) 
 
-## Monitoring a Workflow
-
-see: [Workflow Monitoring](monitoring-workflows.md)
-
 ## Configuring Workflows
 
 see: [Workflow Configuration](../UI/configs.md#1-workflow-configs)
  
+## Monitoring an Execution
+
+see: [Execution Monitoring](monitoring-executions.md)

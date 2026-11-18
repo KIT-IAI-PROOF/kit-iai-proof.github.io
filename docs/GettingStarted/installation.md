@@ -31,8 +31,40 @@ To install PROOF, move to the repository [proof-environment](https://github.com/
 ## Download the worker image (optional)
 Starting with version 1.1.0, PROOF automatically downloads missing Docker images when needed. However, you can optionally download the [proof-worker-python image](https://github.com/orgs/KIT-IAI-PROOF/packages/container/package/proof-worker-python) in advance to speed up the first execution:
 ```
-docker pull ghcr.io/kit-iai-proof/proof-worker-python:1.3.0
+docker pull ghcr.io/kit-iai-proof/proof-worker-python:1.4.0
 ```
+
+### Where worker images are found
+The PROOF worker images are published as containers in the GitHub Container Registry of the *KIT-IAI-PROOF* organization and are pulled from there as needed:
+
+- `ghcr.io/kit-iai-proof/proof-worker-python` — base image for **Python** worker programs
+- `ghcr.io/kit-iai-proof/proof-worker-java` — base image for **Java** worker programs
+
+Each image has its own package page on GitHub, where all published versions (`tags`) can be browsed, e.g. [proof-worker-python](https://github.com/orgs/KIT-IAI-PROOF/packages/container/package/proof-worker-python) or [proof-worker-java](https://github.com/orgs/KIT-IAI-PROOF/packages/container/package/proof-worker-java).
+
+### The image naming scheme
+The name of an image encodes the *runtime environment* and the *version*. A minimal image tag looks like this:
+
+```
+proof-worker-<environment>:<version>
+```
+
+For example:
+
+- `proof-worker-python:1.4.0` — the current version of the base Python worker image
+- `proof-worker-java:1.4.0` — the current version of the base Java worker image
+
+Some worker images also ship packages that are **not required by every block** (e.g. `fmpy`, which is only needed for *FMU* blocks). These are provided as dedicated variants whose tag appends the respective package list to the version:
+
+```
+proof-worker-<environment>:<version>-<package-list>
+```
+
+For example:
+
+- `proof-worker-python:1.4.0-fmpy` — the Python worker image including the additional `fmpy` package
+
+The registry additionally maintains `latest` / `latest-<package-list>` tags that always point to the most recent release, e.g. `proof-worker-python:latest` and `proof-worker-python:latest-fmpy`. For reproducible results you should prefer a concrete version tag (such as `1.4.0`) over `latest`.
 
 ## Start PROOF
 To start PROOF, navigate to proof-environment and start PROOF using the provided startPROOF scripts:  
@@ -74,7 +106,7 @@ PROOF is using certain port numbers per default and therefore expects them not t
 - proof-frontend: 80
 - proof-rabbitmq: 5672, 15672, 15674, 61613
 
-In case these port need to be changed (e.g. one of them is already in use), they can be adjusted in the docker-compose.prod.yaml file under proof-environment/docker. \
+In case these port need to be changed (e.g. one of them is already in use), they can be adjusted in the docker-compose.yaml file under proof-environment/docker. \
 In case it is unclear why rabbitmq requires multiple ports, see the rabbitmq documentation [here](https://www.rabbitmq.com/docs/networking). 
 
 ## Data exchange
@@ -93,3 +125,4 @@ Files placed in the `userdata` folder can be referenced in your workflows for re
 To test your installation and explore demo workflows, see the [Tutorial & Demo Workflows](tutorial.md) page. There you'll find step-by-step instructions for:
 - The FileReader-to-FileWriter workflow to verify your installation
 - Energy Building Model (EBM) simulations
+- FMU (Functional Mock-up Unit) integration workflows

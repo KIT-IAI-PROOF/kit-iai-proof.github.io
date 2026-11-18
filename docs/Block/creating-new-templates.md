@@ -93,6 +93,8 @@ To create a new *Template* in the PROOF UI, follow these steps:
 After having created a new *Template*, it can be used immediately to instantiate *Blocks* in *Workflows* using the  *PROOF Workflow Editor*. 
 You can find the *Template* in the right sidebar of the *PROOF Workflow Editor* and drag and drop it onto the *Workflow* canvas.
 
+> **Note:** A *Template* runs inside a worker Docker image, which is selected via the `containerImage` field (see the FAQ entry [Which Docker images can be used in Block Templates?](../faq.md#which-docker-images-can-be-used-in-block-templates)). Where the worker images are hosted and how their names are composed (including the `<version>-<package-list>` variants such as `-fmpy`) is described in the [Installation & Setup](../GettingStarted/installation.md#the-image-naming-scheme) guide.
+
 ## Template Usage Tracking
 Starting with version 1.3.0, PROOF provides template usage tracking:
 - **Prevent Accidental Deletion**: The system prevents deletion of in-use templates with dependency visualization

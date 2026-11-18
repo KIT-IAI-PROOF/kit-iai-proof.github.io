@@ -11,7 +11,7 @@ pyro5
 1. Let your custom docker image extend our base worker python image.  
 Dockerfile:
 ```dockerfile
-FROM ghcr.io/kit-iai-proof/proof-worker-python:1.2.0
+FROM ghcr.io/kit-iai-proof/proof-worker-python:1.4.0
 # requirements.txt must be located in the same directory as this Dockerfile!
 COPY requirements.txt requirements.txt
 # Install all python packages listed under requirements.txt into the predefined python venv
