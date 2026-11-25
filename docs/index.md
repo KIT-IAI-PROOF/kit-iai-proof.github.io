@@ -1,3 +1,19 @@
+---
+title: PROOF – PROcess Orchestration Framework
+description: >-
+  PROOF is an open-source, containerized co-simulation and scientific workflow
+  orchestration framework for energy systems. Create, orchestrate and monitor
+  complex workflows with the PROOF framework and its user-friendly web UI.
+keywords:
+  - PROOF
+  - co-simulation framework
+  - process orchestration
+  - scientific workflow
+  - workflow orchestration
+  - energy systems
+  - containerized simulation
+---
+
 # PROOF – PROcess Orchestration Framework
 
 <!--
