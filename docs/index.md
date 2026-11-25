@@ -10,9 +10,11 @@
 <!--
 ## Introduction
 -->
-PROOF is a co-simulation framework that allows users to create and orchestrate complex workflows. 
+**PROOF** (PROcess Orchestration Framework) is an open-source, containerized **co-simulation and scientific workflow orchestration framework** for **energy systems**. It allows users to create, orchestrate and monitor complex simulation workflows without being forced to program.
 
-The PROOF UI provides a user-friendly interface for creating and managing workflows.
+The PROOF web UI provides a user-friendly interface for creating workflows, connecting reusable *Blocks*, and monitoring running executions. Workflows are orchestrated by the PROOF Orchestrator and executed by the PROOF Worker inside Docker containers.
+
+> **New to PROOF?** Follow the [Installation & Setup](GettingStarted/installation.md) guide to get started, or browse the [Getting Started](GettingStarted/tutorial.md) tutorials.
 
 Basic Docker knowledge is required to start and interact with the first version.
 
