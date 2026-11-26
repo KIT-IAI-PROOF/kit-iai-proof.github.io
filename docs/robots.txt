@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kit-iai-proof.github.io/sitemap.xml
