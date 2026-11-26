@@ -1,4 +1,10 @@
-site_name: PROOF Documentation
+site_name: PROOF – PROcess Orchestration Framework
+site_url: https://kit-iai-proof.github.io/
+site_description: >-
+  PROOF is an open-source, containerized co-simulation and scientific workflow
+  orchestration framework for energy systems. Create, orchestrate and monitor
+  complex workflows with the PROOF framework and its user-friendly web UI.
+site_author: Karlsruhe Institute of Technology (KIT), Institute for Automation and Applied Informatics (IAI)
 
 markdown_extensions:
   - attr_list
