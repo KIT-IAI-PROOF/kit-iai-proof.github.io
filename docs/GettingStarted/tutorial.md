@@ -72,12 +72,16 @@ see [FileReader-to-FileWriter](#test-your-installation-filereader-to-filewriter)
 
 FMU workflows allow you to integrate external simulation models and tools into PROOF. An FMU is a standardized format for sharing simulation models.
 
+For the full reference on FMU *Blocks* — the runner types, the configuration file format, input scheduling, 
+bringing your own FMU and troubleshooting — see [Using FMUs in PROOF](../Block/using-fmus.md) before/during 
+following these demos.
+
 ### EBM with FMUs 
 
 The **EBM with FMUs** workflow extends the *Energy-Building-Model* by using [Functional Mock-up Units (FMUs)](https://fmi-standard.org/) to model the building components. It combines the FMU runner with the energy building model, allowing you to integrate external FMU models into a building simulation.
 
 **What it demonstrates:**
-- Usage of FMU templates which out- and inputs are specifically designed to run with one Fmu.
+- Usage of [FMU templates which out- and inputs are specifically designed to run with one FMU](../Block/using-fmus.md#dedicated-fmu-template) (i.e. the "dedicated FMU template" approach).
 
 **What it adds beyond ConfigFmuRunner:**
 - Uses FMU-specific configuration (FMU location and model name)
@@ -98,6 +102,9 @@ The **ConfigFmuRunner** workflow demonstrates how to use a pre-configured FMU th
 - Processes and writes the results to output files
 
 **Configuration steps:**
+
+> The `facility_param.json` config file format used here (key `Adder` with `parameter_dict` / `input_dict` /
+> `output_list`) is described in [Using FMUs in PROOF → The configuration file format](../Block/using-fmus.md#the-configuration-file-format).
 
 1. **Config FMU Runner block:** This block manages the FMU execution
    - `fmu_name`: Enter `Adder` (this must match the name defined in your *facility_param.json* located in `userdata`)
@@ -130,6 +137,9 @@ The **SingleFmuRunner** workflow provides more control over FMU execution. Inste
 - Processes results through configurable file operations
 
 **Configuration steps:**
+
+> The full `fmu_input_list` / `fmu_output_list` / `fmu_input_values` semantics are described in
+> [Using FMUs in PROOF → Single FMU Runner](../Block/using-fmus.md#single-fmu-runner).
 
 1. **SingleFmuRunner block:**
    - `fmu_file_path`: Enter the path to your FMU file, for example `fmus/adder.fmu`
