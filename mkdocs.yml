@@ -34,6 +34,7 @@ nav:
   - Blocks:
     - Introduction: Block/overview.md
     - Using Blocks: UI/using-proof-blocks.md
+    - Using FMUs: Block/using-fmus.md
     - Creating new Templates: Block/creating-new-templates.md
     #- Changing Blocks: Block/using-proof-blocks.md
   #- Program: Program/proof-programs.md
